@@ -38,6 +38,14 @@ namespace AdminCorridorSystem.Controllers
         {
             return View();
         }
+        public ActionResult AddUser()
+        {
+            return View();
+        }
+        public ActionResult ManageUsers()
+        {
+            return View();
+        }
 
         public ActionResult About()
         {
