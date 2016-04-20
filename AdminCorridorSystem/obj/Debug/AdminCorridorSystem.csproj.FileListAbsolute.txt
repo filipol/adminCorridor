@@ -101,6 +101,6 @@ C:\Users\Filip\Desktop\Corridor\AdminCorridorSystem\bin\System.Web.WebPages.Depl
 C:\Users\Filip\Desktop\Corridor\AdminCorridorSystem\bin\System.Web.WebPages.Razor.xml
 C:\Users\Filip\Desktop\Corridor\AdminCorridorSystem\bin\Antlr3.Runtime.pdb
 C:\Users\Filip\Desktop\Corridor\AdminCorridorSystem\bin\Newtonsoft.Json.xml
-C:\Users\Filip\Desktop\Corridor\AdminCorridorSystem\obj\Debug\AdminCorridorSystem.csprojResolveAssemblyReference.cache
 C:\Users\Filip\Desktop\Corridor\AdminCorridorSystem\obj\Debug\AdminCorridorSystem.dll
 C:\Users\Filip\Desktop\Corridor\AdminCorridorSystem\obj\Debug\AdminCorridorSystem.pdb
+C:\Users\Filip\Desktop\Corridor\AdminCorridorSystem\obj\Debug\AdminCorridorSystem.csprojResolveAssemblyReference.cache

@@ -3,6 +3,21 @@
         padding-left:50px !important;
     }
 }
+@media only screen and (max-width: 1280px){
+    .something {
+        padding-left:100px !important;
+    }
+}
+@media only screen and (max-width: 980px) {
+    .something {
+        padding-left: 0px !important;
+    }
+}
+@media only screen and (min-width: 1280px){
+    .displaySize{
+        display:none !important;
+    }
+}
 .form {
     padding:30px !important;
 }
@@ -21,4 +36,7 @@
 }
 .contentPadding{
     padding-top:50px;
+}
+.bajs{
+    padding:50px;
 }

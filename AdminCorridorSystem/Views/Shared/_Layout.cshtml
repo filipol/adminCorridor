@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @*<title>@ViewBag.Title - My ASP.NET Application</title>*@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
           rel="stylesheet">
 
@@ -12,25 +12,26 @@
 </head>
 <body>
     <div class="navbar navbar-fixed-top topNav">
-        <div class="container">
+        <div class="container displaySize">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
-            @*<div class="navbar-collapse collapse">
+            <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <a href="/Home/Index" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Home"><span class="material-icons icons">home</span></a>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                 </ul>
-            </div>*@
+            </div>       
         </div>
     </div>
-    <div class="container body-content">
+
+    <div class="container body-content something">
         @RenderBody()
         <hr />
         <footer>
@@ -41,23 +42,23 @@
     <div>
         <ul id="slide-out" class="side-nav fixed sideNav">
             <li style="padding-top:50px">
-                <a href="/Home/Index" class="tooltipped" data-position="right" data-delay="50" data-tooltip="Home"><span class="material-icons icons">home</span></a>       
+                <a href="/Home/Index" class="tooltipped" data-position="right" data-delay="50" data-tooltip="Home"><span class="material-icons icons">home</span></a>
             </li>
             <li>
-                <a href="/Home/AddUser" class="tooltipped" data-position="right" data-delay="50" data-tooltip="Add user"><span class="material-icons icons">person_add</span></a>       
+                <a href="/Home/AddUser" class="tooltipped" data-position="right" data-delay="50" data-tooltip="Add user"><span class="material-icons icons">person_add</span></a>
             </li>
             <li>
                 <a href="/Home/ManageUsers" class="tooltipped" data-position="right" data-delay="50" data-tooltip="Manage users"><span class="material-icons icons">group</span></a>
             </li>
         </ul>
-    </div>   
+    </div>
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
 
 
-    
+
 
 </body>
 </html>
