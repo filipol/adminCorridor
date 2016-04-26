@@ -1,0 +1,42 @@
+﻿@media only screen and (max-width: 600px) {
+   .contentPadding {
+        padding-left:50px !important;
+    }
+}
+@media only screen and (max-width: 1280px){
+    .something {
+        padding-left:100px !important;
+    }
+}
+@media only screen and (max-width: 980px) {
+    .something {
+        padding-left: 0px !important;
+    }
+}
+@media only screen and (min-width: 1280px){
+    .displaySize{
+        display:none !important;
+    }
+}
+.form {
+    padding:30px !important;
+}
+.topNav{
+    background-color:#18a9e7;
+}
+.sideNav{
+    background-color:rgba(24, 169, 231, 0.71);
+    text-align:center;
+}
+.topNavText{
+    color:#ffffff;
+}
+.icons{
+    color:#ffffff !important;
+}
+.contentPadding{
+    padding-top:50px;
+}
+.bajs{
+    padding:50px;
+}
