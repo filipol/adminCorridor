@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 
@@ -14,6 +16,16 @@ namespace AdminCorridorSystem.Controllers
             return View();
         }
 
+        public bool GetToken()
+        {
+            List<String> hej = new List<string>();
+            hej.Add("hej,hej");
+            Task<string> result = SendRequests.RunRequest("POST", "TEST", hej);
+            var finalres = result.Result;
+            Debug.WriteLine("Test: " + finalres);
+            Debug.WriteLine("Testte");
+            return true;
+        }
         // GET: Login/Details/5
         public ActionResult Details(int id)
         {
