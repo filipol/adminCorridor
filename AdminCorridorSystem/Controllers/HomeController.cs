@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
+using AdminCorridorSystem.Models;
 
 namespace AdminCorridorSystem.Controllers
 {
@@ -44,7 +45,9 @@ namespace AdminCorridorSystem.Controllers
         }
         public ActionResult ManageUsers()
         {
-            return View();
+            GetUsers();
+            ManageUsersViewModel us = new ManageUsersViewModel();
+            return View(us);
         }
 
         public ActionResult About()
@@ -59,6 +62,26 @@ namespace AdminCorridorSystem.Controllers
             ViewBag.Message = "Your contact page.";
 
             return View();
+        }
+
+        public async Task<ActionResult> GetUsers()
+        {
+            string result = await SendRequests.RunRequest("GET", "Users/1", null);
+
+            if (result != "ERROR")
+            {
+                Users user = new Users();
+                user.FirstName = result;
+                ManageUsersViewModel x = new ManageUsersViewModel();
+                x.Users.Add(user);
+                
+                return View(x);  
+            }
+            else
+            {
+                return View();
+            }
+            
         }
     }
 }

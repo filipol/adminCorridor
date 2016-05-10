@@ -21,7 +21,7 @@
                 <img src="~/Images/LogaLoginV4.png" />
             </div>    
         <div class="col s1" style="height:600px;">
-            <form action="LoginController/GetToken" method="post">
+            <form action="@Url.Action("GetToken" , "Login", null)" method="post">
                 <div class="card-panel z-depth-5" style="border-radius:10px !important; height:400px;">
                     <div style="text-align:center; margin-left:auto; margin-right:auto; padding-top:40px;">
                         <div class="row" style="margin-left:20%; margin-right:20%;">
@@ -32,17 +32,14 @@
                         </div>
                         <div class="row" style="margin-left:20%; margin-right:20%;">
                             <div class="input-field col s12">
-                                <input name="password" type="text" class="validate">
+                                <input name="password" type="password" class="validate">
                                 <label class="active" for="password">Password</label>
                             </div>
                         </div>
                     </div>
                     <div style="text-align:center; padding-top:20px;">
                         <div class="row">
-                            <input type="submit" value="Sign in" class="waves-effect waves-light btn topNav" style=" width:160px;">
-                        </div>
-                        <div class="row">
-                            <a class="waves-effect waves-light btn topNav" style="width:160px;">Sign up</a>
+                            <input type="submit" value="Sign in" class="waves-effect waves-light btn topNav" style="width:160px;">
                         </div>
                     </div>
                 </div>

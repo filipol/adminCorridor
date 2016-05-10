@@ -1,4 +1,7 @@
-﻿@{
+﻿@model AdminCorridorSystem.Models.ManageUsersViewModel
+
+
+@{
     ViewBag.Title = "UpdateUsers";
 }
 <html>
@@ -21,8 +24,8 @@
                 <p>Are you sure you whant to delete the user?</p>
 
                 <div class="modal-footer">
-                    <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Confirm</a>
-                    <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Cancel</a>
+                    <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Confirm</a>
+                    <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Cancel</a>
                 </div>
             </div>
         </div>
@@ -40,33 +43,23 @@
             </thead>
 
             <tbody>
-                <tr>
-                    <td>Alvin</td>
-                    <td>Eclair</td>
-                    <td>$0.87</td>
-                    <td style="text-align:right">
-                        <a data-target="modal1" class="waves-effect waves-light btn modal-trigger" style="background-color:#ff0000"><i class="material-icons left">delete_forever</i>Delete</a>
-                        <a class="waves-effect waves-light btn topNav"><i class="material-icons left">mode_edit</i>Edit</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Alan</td>
-                    <td>Jellybean</td>
-                    <td>$3.76</td>
-                    <td style="text-align:right">
-                        <a data-target="modal1" class="waves-effect waves-light btn modal-trigger" style="background-color:#ff0000"><i class="material-icons left">delete_forever</i>Delete</a>
-                        <a class="waves-effect waves-light btn topNav"><i class="material-icons left">mode_edit</i>Edit</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Jonathan</td>
-                    <td>Lollipop</td>
-                    <td>$7.00</td>
-                    <td style="text-align:right">
-                        <a data-target="modal1" class="waves-effect waves-light btn modal-trigger" style="background-color:#ff0000"><i class="material-icons left">delete_forever</i>Delete</a>
-                        <a class="waves-effect waves-light btn topNav"><i class="material-icons left">mode_edit</i>Edit</a>
-                    </td>
-                </tr>       
+                @if (Model.Users != null)
+                {
+                    foreach (var i in Model.Users)
+                    {
+                        <tr>
+                            <td>@i.UserName</td>
+                            <td>@i.FirstName</td>
+                            <td>@i.LastName</td>
+                            <td style="text-align:right">
+                                <a data-target="modal1" class="waves-effect waves-light btn modal-trigger" style="background-color:#ff0000"><i class="material-icons left">delete_forever</i>Delete</a>
+                                <a class="waves-effect waves-light btn topNav"><i class="material-icons left">mode_edit</i>Edit</a>
+                            </td>
+                        </tr>
+                    }
+                }
+
+
             </tbody>
         </table>
     </div>

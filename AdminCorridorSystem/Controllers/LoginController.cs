@@ -10,34 +10,34 @@ using System.Net.Http;
 
 namespace AdminCorridorSystem.Controllers
 {
-    public class LoginController : Controller
+    public class LoginController : AsyncController
     {
         // GET: Login
         public ActionResult Index()
         {
             return View();
         }
+        
 
-        public async void GetToken(string username, string password)
+        public async Task<ActionResult> GetToken(FormCollection form)
         {
             var values = new Dictionary<string, string>();
-            values.Add("UserName", username);
-            values.Add("Password", password);
-            values.Add("Grant_Type", "password");
+            values.Add("Password", form["password"].ToString());
+            values.Add("UserName", form["username"].ToString().ToLower());
+            values.Add("Grant_Type", "password");           
             var content = new FormUrlEncodedContent(values);
 
-            string result = await SendRequests.RunRequest("POST", "TEST", content);
-            //Dictionary<string, string> body = new Dictionary<string, string>();
-            //body.Add("UserName","PelleS1111");
-            //body.Add(){
+            string result = await SendRequests.RunRequest("POST", "Token", content);
+
+            if(result != "ERROR")
+            {
+                return RedirectToAction("Index", "Home");
+            }
+            else
+            {
+                return RedirectToAction("Index", "Login");
+            }
             
-            //};
-            //body.Add("")
-            //Task<string> result = SendRequests.RunRequest("POST", "TEST", body);
-            //var finalres = result.Result;
-            //Debug.WriteLine("Test: " + finalres);
-            //Debug.WriteLine("Testte");
-            //return true;
         }
         // GET: Login/Details/5
         public ActionResult Details(int id)

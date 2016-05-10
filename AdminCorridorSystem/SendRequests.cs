@@ -20,7 +20,7 @@ namespace AdminCorridorSystem
 
         public static async Task<string> RunRequest(string typeOfReq, string apiEnd, FormUrlEncodedContent body)
         {
-            string baseURL = "http://193.10.30.154/api/";
+            string baseURL = "http://193.10.30.154/DeveloperAPI/api/";
 
             if (typeOfReq == "GET")
             {
@@ -34,6 +34,10 @@ namespace AdminCorridorSystem
                         {
                             var stringResponse = await response.Content.ReadAsStringAsync();
                             return stringResponse;
+                        }
+                        else
+                        {
+                            return "ERROR";
                         }
                     }
                     catch (OperationCanceledException)
@@ -56,6 +60,10 @@ namespace AdminCorridorSystem
                         {
                             var stringResponse = await response.Content.ReadAsStringAsync();
                             return stringResponse;
+                        }
+                        else
+                        {
+                            return "ERROR";
                         }
                     }
                     catch (OperationCanceledException) 
