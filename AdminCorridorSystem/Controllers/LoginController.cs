@@ -5,6 +5,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
+using System.Net;
+using System.Net.Http;
 
 namespace AdminCorridorSystem.Controllers
 {
@@ -16,15 +18,26 @@ namespace AdminCorridorSystem.Controllers
             return View();
         }
 
-        public bool GetToken()
+        public async void GetToken(string username, string password)
         {
-            List<String> hej = new List<string>();
-            hej.Add("hej,hej");
-            Task<string> result = SendRequests.RunRequest("POST", "TEST", hej);
-            var finalres = result.Result;
-            Debug.WriteLine("Test: " + finalres);
-            Debug.WriteLine("Testte");
-            return true;
+            var values = new Dictionary<string, string>();
+            values.Add("UserName", username);
+            values.Add("Password", password);
+            values.Add("Grant_Type", "password");
+            var content = new FormUrlEncodedContent(values);
+
+            string result = await SendRequests.RunRequest("POST", "TEST", content);
+            //Dictionary<string, string> body = new Dictionary<string, string>();
+            //body.Add("UserName","PelleS1111");
+            //body.Add(){
+            
+            //};
+            //body.Add("")
+            //Task<string> result = SendRequests.RunRequest("POST", "TEST", body);
+            //var finalres = result.Result;
+            //Debug.WriteLine("Test: " + finalres);
+            //Debug.WriteLine("Testte");
+            //return true;
         }
         // GET: Login/Details/5
         public ActionResult Details(int id)

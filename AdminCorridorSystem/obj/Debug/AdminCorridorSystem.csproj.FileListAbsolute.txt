@@ -131,6 +131,7 @@ C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem\bin\Microso
 C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem\bin\Microsoft.Web.Infrastructure.dll
 C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem\bin\Newtonsoft.Json.dll
+C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem\bin\System.Net.Http.Formatting.dll
 C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem\bin\System.Web.Helpers.dll
 C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem\bin\System.Web.Mvc.dll
 C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem\bin\System.Web.Optimization.dll
@@ -145,6 +146,7 @@ C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem\bin\Microso
 C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem\bin\Microsoft.AI.WindowsServer.xml
 C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem\bin\Microsoft.ApplicationInsights.xml
 C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem\bin\System.Net.Http.Formatting.xml
 C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem\bin\System.Web.Helpers.xml
 C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem\bin\System.Web.Mvc.xml
 C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem\bin\System.Web.Optimization.xml
@@ -154,8 +156,5 @@ C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem\bin\System.
 C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem\bin\System.Web.WebPages.Razor.xml
 C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem\bin\Antlr3.Runtime.pdb
 C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem\bin\Newtonsoft.Json.xml
-C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem\obj\Debug\AdminCorridorSystem.csprojResolveAssemblyReference.cache
 C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem\obj\Debug\AdminCorridorSystem.dll
 C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem\obj\Debug\AdminCorridorSystem.pdb
-C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem\bin\System.Net.Http.Formatting.dll
-C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem\bin\System.Net.Http.Formatting.xml

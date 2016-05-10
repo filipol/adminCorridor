@@ -36,5 +36,3 @@ C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem.Tests\bin\D
 C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem.Tests\obj\Debug\AdminCorridorSystem.Tests.csprojResolveAssemblyReference.cache
 C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem.Tests\obj\Debug\AdminCorridorSystem.Tests.dll
 C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem.Tests\obj\Debug\AdminCorridorSystem.Tests.pdb
-C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\System.Net.Http.Formatting.dll
-C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\System.Net.Http.Formatting.xml
