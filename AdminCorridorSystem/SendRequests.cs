@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 using System.Web;
 using AdminCorridorSystem.Models;
 using System.Diagnostics;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using System.Net.Http.Headers;
 
 namespace AdminCorridorSystem
 {
@@ -20,7 +23,8 @@ namespace AdminCorridorSystem
 
         public static async Task<string> RunRequest(string typeOfReq, string apiEnd, FormUrlEncodedContent body)
         {
-            string baseURL = "http://193.10.30.154/DeveloperAPI/api/";
+
+            var baseURL = new Uri("http://193.10.30.154/DeveloperAPI/api/");
 
             if (typeOfReq == "GET")
             {
@@ -28,6 +32,10 @@ namespace AdminCorridorSystem
                 {
                     try
                     {
+                        if (HttpContext.Current.Request.Cookies != null && client.DefaultRequestHeaders.Authorization == null)
+                        {
+                            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", HttpContext.Current.Request.Cookies["AccessToken"].Value);
+                        }
                         var response = await client.GetAsync(baseURL + apiEnd);
 
                         if (response.StatusCode == HttpStatusCode.OK)
@@ -45,33 +53,107 @@ namespace AdminCorridorSystem
                         return null;
                     }
                 }
-                
-            }
 
-            else if (typeOfReq == "POST")
+            }
+            else if (typeOfReq == "DELETE")
             {
                 using (var client = new HttpClient())
                 {
                     try
                     {
-                        var response = await client.PostAsync(baseURL + apiEnd, body);
-
+                        if (HttpContext.Current.Request.Cookies != null && client.DefaultRequestHeaders.Authorization == null)
+                        {
+                            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", HttpContext.Current.Request.Cookies["AccessToken"].Value);
+                        }
+                        var response = await client.DeleteAsync(baseURL + apiEnd);
                         if (response.StatusCode == HttpStatusCode.OK)
                         {
-                            var stringResponse = await response.Content.ReadAsStringAsync();
-                            return stringResponse;
+                            return response.StatusCode.ToString();
                         }
                         else
                         {
                             return "ERROR";
                         }
                     }
-                    catch (OperationCanceledException) 
+                    catch (OperationCanceledException)
+                    {
+                        return "ERROR";
+                    }
+                }
+                    
+
+            }
+            else if (typeOfReq == "POST")
+            {
+                if (apiEnd == "Token")
+                {
+                    try
+                    {
+                        var cookieContainer = new CookieContainer();
+
+
+                        using (var handler = new HttpClientHandler() { CookieContainer = cookieContainer })
+                        using (var client = new HttpClient(handler) { BaseAddress = baseURL })
+                        {
+                            var response = await client.PostAsync(baseURL + apiEnd, body);
+
+                            if (response.StatusCode == HttpStatusCode.OK)
+                            {
+                                var stringResponse = response.Content.ReadAsStringAsync().Result;
+
+                                var token = (JObject)JsonConvert.DeserializeObject(stringResponse);
+                                var tok = token.First.First.Value<string>();
+                                HttpContext.Current.Response.Cookies.Set(new HttpCookie("AccessToken")
+                                {
+                                    Value = tok,
+                                    HttpOnly = true,
+
+                                });
+
+                                return stringResponse.ToString();
+                            }
+                            else
+                            {
+                                return "ERROR";
+                            }
+                        }
+
+                    }
+                    catch (OperationCanceledException)
                     {
                         return null;
                     }
                 }
-                
+                else
+                {
+                    using (var client = new HttpClient())
+                    {
+
+                        if (HttpContext.Current.Request.Cookies != null && client.DefaultRequestHeaders.Authorization == null)
+                        {
+                            var test = HttpContext.Current.Request.Cookies["AccessToken"].Value;
+                            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", HttpContext.Current.Request.Cookies["AccessToken"].Value);
+                        }
+                        try
+                        {
+                            var response = await client.PostAsync(baseURL + apiEnd, body);
+
+                            if (response.StatusCode == HttpStatusCode.OK)
+                            {
+                                var stringResponse = await response.Content.ReadAsStringAsync();
+                                return stringResponse;
+                            }
+                            else
+                            {
+                                return "ERROR";
+                            }
+                        }
+                        catch (OperationCanceledException)
+                        {
+                            return null;
+                        }
+                    }
+                }
             }
 
             else
@@ -79,54 +161,6 @@ namespace AdminCorridorSystem
                 return null;
             }
 
-            return null;
-            //using (var client = new HttpClient())
-            //{
-            //    client.BaseAddress = new Uri("http://193.10.30.154/api/");
-            //    client.DefaultRequestHeaders.Accept.Clear();
-            //    client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-            //    HttpResponseMessage response = null;
-
-            //    if (typeOfReq == "GET")
-            //    {
-            //        // HTTP GET
-            //        response = await client.GetAsync(apiEnd);
-            //        if (response.IsSuccessStatusCode)
-            //        {
-            //            var res = await response.Content.ReadAsAsync<Users>();
-            //            Console.WriteLine(res);
-            //        }
-            //    }
-
-            //    else if (typeOfReq == "POST")
-            //    {
-            //        // HTTP POST
-            //        //List<string> Attributes = reqBody;
-            //        //List<string> Values = reqBody;
-            //        var postBody = new Users() { UserName = "pelleS1111", Password = "Testee1234", Grant_type = "password" };
-            //        response = await client.PostAsJsonAsync("Token", postBody);
-            //        var content = await response.Content.ReadAsStringAsync();
-            //        return content;
-            //        if (response.IsSuccessStatusCode)
-            //        {
-            //            // Get the URI of the created resource.
-            //            //Uri gizmoUrl = response.Headers.Location;
-            //            Console.WriteLine(response);
-            //        }
-            //    }
-            //    else if (typeOfReq == "PUT")
-            //    {
-            //        // HTTP PUT
-            //        var putBody = 80;   // Update price
-            //        response = await client.PutAsJsonAsync("Put", putBody);
-            //    }
-            //    else if (typeOfReq == "DELETE")
-            //    {
-            //        // HTTP DELETE
-            //        response = await client.DeleteAsync("Delete");
-            //    }
-            //    return null;
-            //}
         }
     }
 }

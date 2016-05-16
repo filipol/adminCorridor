@@ -12,5 +12,6 @@ namespace AdminCorridorSystem.Models
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Grant_type { get; set; }
+        public int uId { get; set; }
     }
 }

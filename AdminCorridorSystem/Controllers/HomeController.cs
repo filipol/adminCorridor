@@ -7,11 +7,14 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using AdminCorridorSystem.Models;
+using Newtonsoft.Json.Linq;
+using Newtonsoft.Json;
 
 namespace AdminCorridorSystem.Controllers
 {
     public class HomeController : Controller
     {
+
         static void Main()
         {
             RunAsync().Wait();
@@ -43,11 +46,10 @@ namespace AdminCorridorSystem.Controllers
         {
             return View();
         }
-        public ActionResult ManageUsers()
+        public async Task<ActionResult> ManageUsers()
         {
-            GetUsers();
-            ManageUsersViewModel us = new ManageUsersViewModel();
-            return View(us);
+            await GetUsers(1);
+            return View();
         }
 
         public ActionResult About()
@@ -64,18 +66,45 @@ namespace AdminCorridorSystem.Controllers
             return View();
         }
 
-        public async Task<ActionResult> GetUsers()
+
+        public async Task<ActionResult> DeleteUser(int uId)
         {
-            string result = await SendRequests.RunRequest("GET", "Users/1", null);
+            
+            string result = await SendRequests.RunRequest("DELETE", "api/Users/" + uId, null);
 
             if (result != "ERROR")
             {
-                Users user = new Users();
-                user.FirstName = result;
-                ManageUsersViewModel x = new ManageUsersViewModel();
-                x.Users.Add(user);
+                await GetUsers(1);
+                return View("ManageUsers");
+            }
+            else
+            {
+                return View("ManageUsers");
+            }
+            
+        }
+
+        public async Task<ActionResult> GetUsers(int type)
+        {
+            string result = await SendRequests.RunRequest("GET", "Users/"+ type, null);
+
+            if (result != "ERROR")
+            {
+                var users = (JArray)JsonConvert.DeserializeObject(result);
+                ManageUsersViewModal ManagedUsers = new ManageUsersViewModal();
+                foreach (var i in users)
+                {
+                    Users user = new Users();
+                    var test = (JObject)i;
+                    user.FirstName = i.SelectToken("FirstName").Value<string>(); 
+                    user.UserName = i.SelectToken("UserName").Value<string>();
+                    user.LastName = i.SelectToken("FirstName").Value<string>();
+                    user.uId = i.SelectToken("Id").Value<int>();
+                    ManagedUsers.ManageUser.Add(user);
+                }
                 
-                return View(x);  
+                
+                return View("ManageUsers", ManagedUsers);  
             }
             else
             {
