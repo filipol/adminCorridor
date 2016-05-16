@@ -1,0 +1,117 @@
+C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\ApplicationInsights.config
+C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\roslyn\csc.exe
+C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\roslyn\System.Collections.Immutable.dll
+C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\roslyn\System.Reflection.Metadata.dll
+C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\roslyn\vbc.exe
+C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\roslyn\VBCSCompiler.exe
+C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\roslyn\VBCSCompiler.exe.config
+C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\AdminCorridorSystem.Tests.dll.config
+C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\AdminCorridorSystem.Tests.dll
+C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\AdminCorridorSystem.Tests.pdb
+C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\AdminCorridorSystem.dll
+C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\System.Web.Helpers.dll
+C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\System.Web.Mvc.dll
+C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\System.Web.Razor.dll
+C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\System.Web.WebPages.dll
+C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\System.Web.Optimization.dll
+C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\AdminCorridorSystem.pdb
+C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\System.Web.Helpers.xml
+C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\System.Web.Mvc.xml
+C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\System.Web.Razor.xml
+C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\System.Web.WebPages.xml
+C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\System.Web.WebPages.Razor.xml
+C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\System.Web.Optimization.xml
+C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem.Tests\obj\Debug\AdminCorridorSystem.Tests.csprojResolveAssemblyReference.cache
+C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem.Tests\obj\Debug\AdminCorridorSystem.Tests.dll
+C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem.Tests\obj\Debug\AdminCorridorSystem.Tests.pdb
+C:\Users\axel_\Desktop\Jesper remove if needed\adminCorridor-adding-logic\AdminCorridorSystem.Tests\bin\Debug\ApplicationInsights.config
+C:\Users\axel_\Desktop\Jesper remove if needed\adminCorridor-adding-logic\AdminCorridorSystem.Tests\bin\Debug\roslyn\csc.exe
+C:\Users\axel_\Desktop\Jesper remove if needed\adminCorridor-adding-logic\AdminCorridorSystem.Tests\bin\Debug\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\axel_\Desktop\Jesper remove if needed\adminCorridor-adding-logic\AdminCorridorSystem.Tests\bin\Debug\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\axel_\Desktop\Jesper remove if needed\adminCorridor-adding-logic\AdminCorridorSystem.Tests\bin\Debug\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\axel_\Desktop\Jesper remove if needed\adminCorridor-adding-logic\AdminCorridorSystem.Tests\bin\Debug\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\axel_\Desktop\Jesper remove if needed\adminCorridor-adding-logic\AdminCorridorSystem.Tests\bin\Debug\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\axel_\Desktop\Jesper remove if needed\adminCorridor-adding-logic\AdminCorridorSystem.Tests\bin\Debug\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\axel_\Desktop\Jesper remove if needed\adminCorridor-adding-logic\AdminCorridorSystem.Tests\bin\Debug\roslyn\System.Collections.Immutable.dll
+C:\Users\axel_\Desktop\Jesper remove if needed\adminCorridor-adding-logic\AdminCorridorSystem.Tests\bin\Debug\roslyn\System.Reflection.Metadata.dll
+C:\Users\axel_\Desktop\Jesper remove if needed\adminCorridor-adding-logic\AdminCorridorSystem.Tests\bin\Debug\roslyn\vbc.exe
+C:\Users\axel_\Desktop\Jesper remove if needed\adminCorridor-adding-logic\AdminCorridorSystem.Tests\bin\Debug\roslyn\VBCSCompiler.exe
+C:\Users\axel_\Desktop\Jesper remove if needed\adminCorridor-adding-logic\AdminCorridorSystem.Tests\bin\Debug\roslyn\VBCSCompiler.exe.config
+C:\Users\axel_\Desktop\Jesper remove if needed\adminCorridor-adding-logic\AdminCorridorSystem.Tests\bin\Debug\AdminCorridorSystem.Tests.dll.config
+C:\Users\axel_\Desktop\Jesper remove if needed\adminCorridor-adding-logic\AdminCorridorSystem.Tests\bin\Debug\AdminCorridorSystem.Tests.dll
+C:\Users\axel_\Desktop\Jesper remove if needed\adminCorridor-adding-logic\AdminCorridorSystem.Tests\bin\Debug\AdminCorridorSystem.Tests.pdb
+C:\Users\axel_\Desktop\Jesper remove if needed\adminCorridor-adding-logic\AdminCorridorSystem.Tests\bin\Debug\AdminCorridorSystem.dll
+C:\Users\axel_\Desktop\Jesper remove if needed\adminCorridor-adding-logic\AdminCorridorSystem.Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\axel_\Desktop\Jesper remove if needed\adminCorridor-adding-logic\AdminCorridorSystem.Tests\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\axel_\Desktop\Jesper remove if needed\adminCorridor-adding-logic\AdminCorridorSystem.Tests\bin\Debug\Newtonsoft.Json.dll
+C:\Users\axel_\Desktop\Jesper remove if needed\adminCorridor-adding-logic\AdminCorridorSystem.Tests\bin\Debug\System.Web.Helpers.dll
+C:\Users\axel_\Desktop\Jesper remove if needed\adminCorridor-adding-logic\AdminCorridorSystem.Tests\bin\Debug\System.Web.Mvc.dll
+C:\Users\axel_\Desktop\Jesper remove if needed\adminCorridor-adding-logic\AdminCorridorSystem.Tests\bin\Debug\System.Web.Razor.dll
+C:\Users\axel_\Desktop\Jesper remove if needed\adminCorridor-adding-logic\AdminCorridorSystem.Tests\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Users\axel_\Desktop\Jesper remove if needed\adminCorridor-adding-logic\AdminCorridorSystem.Tests\bin\Debug\System.Web.WebPages.dll
+C:\Users\axel_\Desktop\Jesper remove if needed\adminCorridor-adding-logic\AdminCorridorSystem.Tests\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Users\axel_\Desktop\Jesper remove if needed\adminCorridor-adding-logic\AdminCorridorSystem.Tests\bin\Debug\System.Web.Optimization.dll
+C:\Users\axel_\Desktop\Jesper remove if needed\adminCorridor-adding-logic\AdminCorridorSystem.Tests\bin\Debug\AdminCorridorSystem.pdb
+C:\Users\axel_\Desktop\Jesper remove if needed\adminCorridor-adding-logic\AdminCorridorSystem.Tests\bin\Debug\Newtonsoft.Json.xml
+C:\Users\axel_\Desktop\Jesper remove if needed\adminCorridor-adding-logic\AdminCorridorSystem.Tests\bin\Debug\System.Web.Helpers.xml
+C:\Users\axel_\Desktop\Jesper remove if needed\adminCorridor-adding-logic\AdminCorridorSystem.Tests\bin\Debug\System.Web.Mvc.xml
+C:\Users\axel_\Desktop\Jesper remove if needed\adminCorridor-adding-logic\AdminCorridorSystem.Tests\bin\Debug\System.Web.Razor.xml
+C:\Users\axel_\Desktop\Jesper remove if needed\adminCorridor-adding-logic\AdminCorridorSystem.Tests\bin\Debug\System.Web.WebPages.xml
+C:\Users\axel_\Desktop\Jesper remove if needed\adminCorridor-adding-logic\AdminCorridorSystem.Tests\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\Users\axel_\Desktop\Jesper remove if needed\adminCorridor-adding-logic\AdminCorridorSystem.Tests\bin\Debug\System.Web.WebPages.Razor.xml
+C:\Users\axel_\Desktop\Jesper remove if needed\adminCorridor-adding-logic\AdminCorridorSystem.Tests\bin\Debug\System.Web.Optimization.xml
+C:\Users\axel_\Desktop\Jesper remove if needed\adminCorridor-adding-logic\AdminCorridorSystem.Tests\obj\Debug\AdminCorridorSystem.Tests.csprojResolveAssemblyReference.cache
+C:\Users\axel_\Desktop\Jesper remove if needed\adminCorridor-adding-logic\AdminCorridorSystem.Tests\obj\Debug\AdminCorridorSystem.Tests.dll
+C:\Users\axel_\Desktop\Jesper remove if needed\adminCorridor-adding-logic\AdminCorridorSystem.Tests\obj\Debug\AdminCorridorSystem.Tests.pdb
+C:\Users\Viktor\Documents\Visual Studio 2015\Projects\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\ApplicationInsights.config
+C:\Users\Viktor\Documents\Visual Studio 2015\Projects\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\roslyn\csc.exe
+C:\Users\Viktor\Documents\Visual Studio 2015\Projects\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Viktor\Documents\Visual Studio 2015\Projects\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Viktor\Documents\Visual Studio 2015\Projects\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Viktor\Documents\Visual Studio 2015\Projects\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Viktor\Documents\Visual Studio 2015\Projects\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Viktor\Documents\Visual Studio 2015\Projects\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Viktor\Documents\Visual Studio 2015\Projects\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\roslyn\System.Collections.Immutable.dll
+C:\Users\Viktor\Documents\Visual Studio 2015\Projects\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\roslyn\System.Reflection.Metadata.dll
+C:\Users\Viktor\Documents\Visual Studio 2015\Projects\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\roslyn\vbc.exe
+C:\Users\Viktor\Documents\Visual Studio 2015\Projects\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\roslyn\VBCSCompiler.exe
+C:\Users\Viktor\Documents\Visual Studio 2015\Projects\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\roslyn\VBCSCompiler.exe.config
+C:\Users\Viktor\Documents\Visual Studio 2015\Projects\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\AdminCorridorSystem.Tests.dll.config
+C:\Users\Viktor\Documents\Visual Studio 2015\Projects\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\AdminCorridorSystem.Tests.dll
+C:\Users\Viktor\Documents\Visual Studio 2015\Projects\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\AdminCorridorSystem.Tests.pdb
+C:\Users\Viktor\Documents\Visual Studio 2015\Projects\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\AdminCorridorSystem.dll
+C:\Users\Viktor\Documents\Visual Studio 2015\Projects\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\Viktor\Documents\Visual Studio 2015\Projects\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\Viktor\Documents\Visual Studio 2015\Projects\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Viktor\Documents\Visual Studio 2015\Projects\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\System.Web.Helpers.dll
+C:\Users\Viktor\Documents\Visual Studio 2015\Projects\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\System.Web.Mvc.dll
+C:\Users\Viktor\Documents\Visual Studio 2015\Projects\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\System.Web.Razor.dll
+C:\Users\Viktor\Documents\Visual Studio 2015\Projects\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Users\Viktor\Documents\Visual Studio 2015\Projects\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\System.Web.WebPages.dll
+C:\Users\Viktor\Documents\Visual Studio 2015\Projects\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Users\Viktor\Documents\Visual Studio 2015\Projects\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\System.Web.Optimization.dll
+C:\Users\Viktor\Documents\Visual Studio 2015\Projects\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\AdminCorridorSystem.pdb
+C:\Users\Viktor\Documents\Visual Studio 2015\Projects\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml
+C:\Users\Viktor\Documents\Visual Studio 2015\Projects\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Viktor\Documents\Visual Studio 2015\Projects\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\System.Web.Helpers.xml
+C:\Users\Viktor\Documents\Visual Studio 2015\Projects\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\System.Web.Mvc.xml
+C:\Users\Viktor\Documents\Visual Studio 2015\Projects\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\System.Web.Razor.xml
+C:\Users\Viktor\Documents\Visual Studio 2015\Projects\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\System.Web.WebPages.xml
+C:\Users\Viktor\Documents\Visual Studio 2015\Projects\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\Users\Viktor\Documents\Visual Studio 2015\Projects\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\System.Web.WebPages.Razor.xml
+C:\Users\Viktor\Documents\Visual Studio 2015\Projects\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\System.Web.Optimization.xml
+C:\Users\Viktor\Documents\Visual Studio 2015\Projects\adminCorridor\AdminCorridorSystem.Tests\obj\Debug\AdminCorridorSystem.Tests.csprojResolveAssemblyReference.cache
+C:\Users\Viktor\Documents\Visual Studio 2015\Projects\adminCorridor\AdminCorridorSystem.Tests\obj\Debug\AdminCorridorSystem.Tests.dll
+C:\Users\Viktor\Documents\Visual Studio 2015\Projects\adminCorridor\AdminCorridorSystem.Tests\obj\Debug\AdminCorridorSystem.Tests.pdb

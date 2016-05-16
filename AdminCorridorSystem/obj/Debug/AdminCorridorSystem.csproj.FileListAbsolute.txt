@@ -104,3 +104,167 @@ C:\Users\Filip\Desktop\Corridor\AdminCorridorSystem\bin\Newtonsoft.Json.xml
 C:\Users\Filip\Desktop\Corridor\AdminCorridorSystem\obj\Debug\AdminCorridorSystem.dll
 C:\Users\Filip\Desktop\Corridor\AdminCorridorSystem\obj\Debug\AdminCorridorSystem.pdb
 C:\Users\Filip\Desktop\Corridor\AdminCorridorSystem\obj\Debug\AdminCorridorSystem.csprojResolveAssemblyReference.cache
+C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem\bin\ApplicationInsights.config
+C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem\bin\roslyn\csc.exe
+C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem\bin\roslyn\vbc.exe
+C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem\bin\roslyn\VBCSCompiler.exe
+C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem\bin\AdminCorridorSystem.dll.config
+C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem\bin\AdminCorridorSystem.dll
+C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem\bin\AdminCorridorSystem.pdb
+C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem\bin\Antlr3.Runtime.dll
+C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem\bin\Microsoft.AI.Web.dll
+C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem\bin\Newtonsoft.Json.dll
+C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem\bin\System.Net.Http.Formatting.dll
+C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem\bin\System.Web.Helpers.dll
+C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem\bin\System.Web.Mvc.dll
+C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem\bin\System.Web.Optimization.dll
+C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem\bin\System.Web.Razor.dll
+C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem\bin\System.Web.WebPages.dll
+C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem\bin\System.Web.WebPages.Razor.dll
+C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem\bin\WebGrease.dll
+C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem\bin\Microsoft.AI.Web.xml
+C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem\bin\System.Net.Http.Formatting.xml
+C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem\bin\System.Web.Helpers.xml
+C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem\bin\System.Web.Mvc.xml
+C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem\bin\System.Web.Optimization.xml
+C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem\bin\System.Web.Razor.xml
+C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem\bin\System.Web.WebPages.xml
+C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem\bin\System.Web.WebPages.Razor.xml
+C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem\bin\Antlr3.Runtime.pdb
+C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem\bin\Newtonsoft.Json.xml
+C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem\obj\Debug\AdminCorridorSystem.dll
+C:\Users\Axel\Desktop\Also Jespers\adminCorridor\AdminCorridorSystem\obj\Debug\AdminCorridorSystem.pdb
+C:\Users\axel_\Desktop\Jesper remove if needed\adminCorridor-adding-logic\AdminCorridorSystem\bin\ApplicationInsights.config
+C:\Users\axel_\Desktop\Jesper remove if needed\adminCorridor-adding-logic\AdminCorridorSystem\bin\roslyn\csc.exe
+C:\Users\axel_\Desktop\Jesper remove if needed\adminCorridor-adding-logic\AdminCorridorSystem\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\axel_\Desktop\Jesper remove if needed\adminCorridor-adding-logic\AdminCorridorSystem\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\axel_\Desktop\Jesper remove if needed\adminCorridor-adding-logic\AdminCorridorSystem\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\axel_\Desktop\Jesper remove if needed\adminCorridor-adding-logic\AdminCorridorSystem\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\axel_\Desktop\Jesper remove if needed\adminCorridor-adding-logic\AdminCorridorSystem\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\axel_\Desktop\Jesper remove if needed\adminCorridor-adding-logic\AdminCorridorSystem\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\axel_\Desktop\Jesper remove if needed\adminCorridor-adding-logic\AdminCorridorSystem\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\axel_\Desktop\Jesper remove if needed\adminCorridor-adding-logic\AdminCorridorSystem\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\axel_\Desktop\Jesper remove if needed\adminCorridor-adding-logic\AdminCorridorSystem\bin\roslyn\vbc.exe
+C:\Users\axel_\Desktop\Jesper remove if needed\adminCorridor-adding-logic\AdminCorridorSystem\bin\roslyn\VBCSCompiler.exe
+C:\Users\axel_\Desktop\Jesper remove if needed\adminCorridor-adding-logic\AdminCorridorSystem\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\axel_\Desktop\Jesper remove if needed\adminCorridor-adding-logic\AdminCorridorSystem\bin\AdminCorridorSystem.dll.config
+C:\Users\axel_\Desktop\Jesper remove if needed\adminCorridor-adding-logic\AdminCorridorSystem\bin\AdminCorridorSystem.dll
+C:\Users\axel_\Desktop\Jesper remove if needed\adminCorridor-adding-logic\AdminCorridorSystem\bin\AdminCorridorSystem.pdb
+C:\Users\axel_\Desktop\Jesper remove if needed\adminCorridor-adding-logic\AdminCorridorSystem\bin\Antlr3.Runtime.dll
+C:\Users\axel_\Desktop\Jesper remove if needed\adminCorridor-adding-logic\AdminCorridorSystem\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\axel_\Desktop\Jesper remove if needed\adminCorridor-adding-logic\AdminCorridorSystem\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\axel_\Desktop\Jesper remove if needed\adminCorridor-adding-logic\AdminCorridorSystem\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\axel_\Desktop\Jesper remove if needed\adminCorridor-adding-logic\AdminCorridorSystem\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\axel_\Desktop\Jesper remove if needed\adminCorridor-adding-logic\AdminCorridorSystem\bin\Microsoft.AI.Web.dll
+C:\Users\axel_\Desktop\Jesper remove if needed\adminCorridor-adding-logic\AdminCorridorSystem\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\axel_\Desktop\Jesper remove if needed\adminCorridor-adding-logic\AdminCorridorSystem\bin\Microsoft.ApplicationInsights.dll
+C:\Users\axel_\Desktop\Jesper remove if needed\adminCorridor-adding-logic\AdminCorridorSystem\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\axel_\Desktop\Jesper remove if needed\adminCorridor-adding-logic\AdminCorridorSystem\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\axel_\Desktop\Jesper remove if needed\adminCorridor-adding-logic\AdminCorridorSystem\bin\Newtonsoft.Json.dll
+C:\Users\axel_\Desktop\Jesper remove if needed\adminCorridor-adding-logic\AdminCorridorSystem\bin\System.Net.Http.Formatting.dll
+C:\Users\axel_\Desktop\Jesper remove if needed\adminCorridor-adding-logic\AdminCorridorSystem\bin\System.Web.Helpers.dll
+C:\Users\axel_\Desktop\Jesper remove if needed\adminCorridor-adding-logic\AdminCorridorSystem\bin\System.Web.Mvc.dll
+C:\Users\axel_\Desktop\Jesper remove if needed\adminCorridor-adding-logic\AdminCorridorSystem\bin\System.Web.Optimization.dll
+C:\Users\axel_\Desktop\Jesper remove if needed\adminCorridor-adding-logic\AdminCorridorSystem\bin\System.Web.Razor.dll
+C:\Users\axel_\Desktop\Jesper remove if needed\adminCorridor-adding-logic\AdminCorridorSystem\bin\System.Web.WebPages.Deployment.dll
+C:\Users\axel_\Desktop\Jesper remove if needed\adminCorridor-adding-logic\AdminCorridorSystem\bin\System.Web.WebPages.dll
+C:\Users\axel_\Desktop\Jesper remove if needed\adminCorridor-adding-logic\AdminCorridorSystem\bin\System.Web.WebPages.Razor.dll
+C:\Users\axel_\Desktop\Jesper remove if needed\adminCorridor-adding-logic\AdminCorridorSystem\bin\WebGrease.dll
+C:\Users\axel_\Desktop\Jesper remove if needed\adminCorridor-adding-logic\AdminCorridorSystem\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\axel_\Desktop\Jesper remove if needed\adminCorridor-adding-logic\AdminCorridorSystem\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\axel_\Desktop\Jesper remove if needed\adminCorridor-adding-logic\AdminCorridorSystem\bin\Microsoft.AI.Web.xml
+C:\Users\axel_\Desktop\Jesper remove if needed\adminCorridor-adding-logic\AdminCorridorSystem\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\axel_\Desktop\Jesper remove if needed\adminCorridor-adding-logic\AdminCorridorSystem\bin\Microsoft.ApplicationInsights.xml
+C:\Users\axel_\Desktop\Jesper remove if needed\adminCorridor-adding-logic\AdminCorridorSystem\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\axel_\Desktop\Jesper remove if needed\adminCorridor-adding-logic\AdminCorridorSystem\bin\System.Net.Http.Formatting.xml
+C:\Users\axel_\Desktop\Jesper remove if needed\adminCorridor-adding-logic\AdminCorridorSystem\bin\System.Web.Helpers.xml
+C:\Users\axel_\Desktop\Jesper remove if needed\adminCorridor-adding-logic\AdminCorridorSystem\bin\System.Web.Mvc.xml
+C:\Users\axel_\Desktop\Jesper remove if needed\adminCorridor-adding-logic\AdminCorridorSystem\bin\System.Web.Optimization.xml
+C:\Users\axel_\Desktop\Jesper remove if needed\adminCorridor-adding-logic\AdminCorridorSystem\bin\System.Web.Razor.xml
+C:\Users\axel_\Desktop\Jesper remove if needed\adminCorridor-adding-logic\AdminCorridorSystem\bin\System.Web.WebPages.xml
+C:\Users\axel_\Desktop\Jesper remove if needed\adminCorridor-adding-logic\AdminCorridorSystem\bin\System.Web.WebPages.Deployment.xml
+C:\Users\axel_\Desktop\Jesper remove if needed\adminCorridor-adding-logic\AdminCorridorSystem\bin\System.Web.WebPages.Razor.xml
+C:\Users\axel_\Desktop\Jesper remove if needed\adminCorridor-adding-logic\AdminCorridorSystem\bin\Antlr3.Runtime.pdb
+C:\Users\axel_\Desktop\Jesper remove if needed\adminCorridor-adding-logic\AdminCorridorSystem\bin\Newtonsoft.Json.xml
+C:\Users\axel_\Desktop\Jesper remove if needed\adminCorridor-adding-logic\AdminCorridorSystem\obj\Debug\AdminCorridorSystem.csprojResolveAssemblyReference.cache
+C:\Users\axel_\Desktop\Jesper remove if needed\adminCorridor-adding-logic\AdminCorridorSystem\obj\Debug\AdminCorridorSystem.dll
+C:\Users\axel_\Desktop\Jesper remove if needed\adminCorridor-adding-logic\AdminCorridorSystem\obj\Debug\AdminCorridorSystem.pdb
+C:\Users\Viktor\Documents\Visual Studio 2015\Projects\adminCorridor\AdminCorridorSystem\bin\ApplicationInsights.config
+C:\Users\Viktor\Documents\Visual Studio 2015\Projects\adminCorridor\AdminCorridorSystem\bin\roslyn\csc.exe
+C:\Users\Viktor\Documents\Visual Studio 2015\Projects\adminCorridor\AdminCorridorSystem\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Viktor\Documents\Visual Studio 2015\Projects\adminCorridor\AdminCorridorSystem\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Viktor\Documents\Visual Studio 2015\Projects\adminCorridor\AdminCorridorSystem\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Viktor\Documents\Visual Studio 2015\Projects\adminCorridor\AdminCorridorSystem\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Viktor\Documents\Visual Studio 2015\Projects\adminCorridor\AdminCorridorSystem\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Viktor\Documents\Visual Studio 2015\Projects\adminCorridor\AdminCorridorSystem\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Viktor\Documents\Visual Studio 2015\Projects\adminCorridor\AdminCorridorSystem\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Viktor\Documents\Visual Studio 2015\Projects\adminCorridor\AdminCorridorSystem\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Viktor\Documents\Visual Studio 2015\Projects\adminCorridor\AdminCorridorSystem\bin\roslyn\vbc.exe
+C:\Users\Viktor\Documents\Visual Studio 2015\Projects\adminCorridor\AdminCorridorSystem\bin\roslyn\VBCSCompiler.exe
+C:\Users\Viktor\Documents\Visual Studio 2015\Projects\adminCorridor\AdminCorridorSystem\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Viktor\Documents\Visual Studio 2015\Projects\adminCorridor\AdminCorridorSystem\bin\AdminCorridorSystem.dll.config
+C:\Users\Viktor\Documents\Visual Studio 2015\Projects\adminCorridor\AdminCorridorSystem\bin\AdminCorridorSystem.dll
+C:\Users\Viktor\Documents\Visual Studio 2015\Projects\adminCorridor\AdminCorridorSystem\bin\AdminCorridorSystem.pdb
+C:\Users\Viktor\Documents\Visual Studio 2015\Projects\adminCorridor\AdminCorridorSystem\bin\Antlr3.Runtime.dll
+C:\Users\Viktor\Documents\Visual Studio 2015\Projects\adminCorridor\AdminCorridorSystem\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Viktor\Documents\Visual Studio 2015\Projects\adminCorridor\AdminCorridorSystem\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Viktor\Documents\Visual Studio 2015\Projects\adminCorridor\AdminCorridorSystem\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Viktor\Documents\Visual Studio 2015\Projects\adminCorridor\AdminCorridorSystem\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Viktor\Documents\Visual Studio 2015\Projects\adminCorridor\AdminCorridorSystem\bin\Microsoft.AI.Web.dll
+C:\Users\Viktor\Documents\Visual Studio 2015\Projects\adminCorridor\AdminCorridorSystem\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Viktor\Documents\Visual Studio 2015\Projects\adminCorridor\AdminCorridorSystem\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Viktor\Documents\Visual Studio 2015\Projects\adminCorridor\AdminCorridorSystem\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Viktor\Documents\Visual Studio 2015\Projects\adminCorridor\AdminCorridorSystem\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Viktor\Documents\Visual Studio 2015\Projects\adminCorridor\AdminCorridorSystem\bin\Newtonsoft.Json.dll
+C:\Users\Viktor\Documents\Visual Studio 2015\Projects\adminCorridor\AdminCorridorSystem\bin\System.Net.Http.Formatting.dll
+C:\Users\Viktor\Documents\Visual Studio 2015\Projects\adminCorridor\AdminCorridorSystem\bin\System.Web.Helpers.dll
+C:\Users\Viktor\Documents\Visual Studio 2015\Projects\adminCorridor\AdminCorridorSystem\bin\System.Web.Mvc.dll
+C:\Users\Viktor\Documents\Visual Studio 2015\Projects\adminCorridor\AdminCorridorSystem\bin\System.Web.Optimization.dll
+C:\Users\Viktor\Documents\Visual Studio 2015\Projects\adminCorridor\AdminCorridorSystem\bin\System.Web.Razor.dll
+C:\Users\Viktor\Documents\Visual Studio 2015\Projects\adminCorridor\AdminCorridorSystem\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Viktor\Documents\Visual Studio 2015\Projects\adminCorridor\AdminCorridorSystem\bin\System.Web.WebPages.dll
+C:\Users\Viktor\Documents\Visual Studio 2015\Projects\adminCorridor\AdminCorridorSystem\bin\System.Web.WebPages.Razor.dll
+C:\Users\Viktor\Documents\Visual Studio 2015\Projects\adminCorridor\AdminCorridorSystem\bin\WebGrease.dll
+C:\Users\Viktor\Documents\Visual Studio 2015\Projects\adminCorridor\AdminCorridorSystem\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Viktor\Documents\Visual Studio 2015\Projects\adminCorridor\AdminCorridorSystem\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Viktor\Documents\Visual Studio 2015\Projects\adminCorridor\AdminCorridorSystem\bin\Microsoft.AI.Web.xml
+C:\Users\Viktor\Documents\Visual Studio 2015\Projects\adminCorridor\AdminCorridorSystem\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Viktor\Documents\Visual Studio 2015\Projects\adminCorridor\AdminCorridorSystem\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Viktor\Documents\Visual Studio 2015\Projects\adminCorridor\AdminCorridorSystem\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Viktor\Documents\Visual Studio 2015\Projects\adminCorridor\AdminCorridorSystem\bin\System.Net.Http.Formatting.xml
+C:\Users\Viktor\Documents\Visual Studio 2015\Projects\adminCorridor\AdminCorridorSystem\bin\System.Web.Helpers.xml
+C:\Users\Viktor\Documents\Visual Studio 2015\Projects\adminCorridor\AdminCorridorSystem\bin\System.Web.Mvc.xml
+C:\Users\Viktor\Documents\Visual Studio 2015\Projects\adminCorridor\AdminCorridorSystem\bin\System.Web.Optimization.xml
+C:\Users\Viktor\Documents\Visual Studio 2015\Projects\adminCorridor\AdminCorridorSystem\bin\System.Web.Razor.xml
+C:\Users\Viktor\Documents\Visual Studio 2015\Projects\adminCorridor\AdminCorridorSystem\bin\System.Web.WebPages.xml
+C:\Users\Viktor\Documents\Visual Studio 2015\Projects\adminCorridor\AdminCorridorSystem\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Viktor\Documents\Visual Studio 2015\Projects\adminCorridor\AdminCorridorSystem\bin\System.Web.WebPages.Razor.xml
+C:\Users\Viktor\Documents\Visual Studio 2015\Projects\adminCorridor\AdminCorridorSystem\bin\Antlr3.Runtime.pdb
+C:\Users\Viktor\Documents\Visual Studio 2015\Projects\adminCorridor\AdminCorridorSystem\bin\Newtonsoft.Json.xml
+C:\Users\Viktor\Documents\Visual Studio 2015\Projects\adminCorridor\AdminCorridorSystem\obj\Debug\AdminCorridorSystem.dll
+C:\Users\Viktor\Documents\Visual Studio 2015\Projects\adminCorridor\AdminCorridorSystem\obj\Debug\AdminCorridorSystem.pdb
+C:\Users\Viktor\Documents\Visual Studio 2015\Projects\adminCorridor\AdminCorridorSystem\obj\Debug\AdminCorridorSystem.csprojResolveAssemblyReference.cache

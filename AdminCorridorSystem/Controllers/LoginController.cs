@@ -1,19 +1,44 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
+using System.Net;
+using System.Net.Http;
 
 namespace AdminCorridorSystem.Controllers
 {
-    public class LoginController : Controller
+    public class LoginController : AsyncController
     {
         // GET: Login
         public ActionResult Index()
         {
             return View();
         }
+        
 
+        public async Task<ActionResult> GetToken(FormCollection form)
+        {
+            var values = new Dictionary<string, string>();
+            values.Add("Password", form["password"].ToString());
+            values.Add("UserName", form["username"].ToString().ToLower());
+            values.Add("Grant_Type", "password");           
+            var content = new FormUrlEncodedContent(values);
+
+            string result = await SendRequests.RunRequest("POST", "Token", content);
+
+            if(result != "ERROR")
+            {
+                return RedirectToAction("Index", "Home");
+            }
+            else
+            {
+                return RedirectToAction("Index", "Login");
+            }
+            
+        }
         // GET: Login/Details/5
         public ActionResult Details(int id)
         {

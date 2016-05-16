@@ -1,4 +1,7 @@
-﻿@{
+﻿@model AdminCorridorSystem.Models.ManageUsersViewModal
+
+
+@{
     ViewBag.Title = "UpdateUsers";
 }
 <html>
@@ -11,75 +14,123 @@
     <link rel="stylesheet" href="~/Content/Basic.css">
 </head>
 <body>
+        <div class="wrapper contentPadding">
 
-    <div class="wrapper contentPadding">
-
-        <!-- Modal Structure -->
-        <div id="modal1" class="modal">
-            <div class="modal-content">
-                <h4>Delete User</h4>
-                <p>Are you sure you whant to delete the user?</p>
-
-                <div class="modal-footer">
-                    <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Confirm</a>
-                    <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Cancel</a>
+            <!-- Modal Structure -->
+            <div id="modal1" class="modal">
+                <div class="modal-content">
+                    <h4>Delete User</h4>
+                    <p>Are you sure you whant to delete the user?</p>
+                    <div class="modal-footer">
+                        
+                        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat" onclick="deleteTheUser()">Confirm</a>
+                        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Cancel</a>
+                    </div>
                 </div>
             </div>
+
+            <div id="modal-edit" class="modal">
+                <div class="modal-content">
+                    <h4>Edit User</h4>
+                    <form class="col s12">
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <input value="" id="first_name" type="text" class="validate">
+                                <label class="active" for="first_name2">First Name</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <input value="" id="last_name" type="text" class="validate">
+                                <label class="active" for="first_name2">Last Name</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <input value="" id="username" type="text" class="validate">
+                                <label class="active" for="first_name2">Username</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <input value="" id="password" type="text" class="validate">
+                                <label class="active" for="first_name2">Password</label>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="modal-footer">
+
+                        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat" onclick="deleteTheUser()">Confirm</a>
+                        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Cancel</a>
+                    </div>
+                </div>
+            </div>
+
+            <nav>
+                <div class="nav-wrapper">
+                    <ul id="nav-mobile" class="left hide-on-med-and-down">
+                        <li><a class="waves-effect waves-light btn" onclick="location.href='@Url.Action("GetUsers", "Home", new RouteValueDictionary(new { type = 1 }))'">Admins</a></li>
+                        <li><a class="waves-effect waves-light btn" onclick="location.href='@Url.Action("GetUsers", "Home", new RouteValueDictionary(new { type = 2 }))'">Teachers</a></li>
+                        <li><a class="waves-effect waves-light btn" onclick="location.href='@Url.Action("GetUsers", "Home", new RouteValueDictionary(new { type = 3 }))'">Students</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <table class="striped responsive-table highlight">
+                <thead>
+                    <tr>
+                        <th data-field="id">Username</th>
+                        <th data-field="name">Firstname</th>
+                        <th data-field="price">Lastname</th>
+                        <th data-field="acttion" style="text-align:right">action</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    @if (Model.ManageUser != null)
+                    {
+                        foreach (var i in Model.ManageUser)
+                        {
+                            <tr>
+                                <td>@i.UserName</td>
+                                <td>@i.FirstName</td>
+                                <td>@i.LastName</td>
+                                <td style="text-align:right">
+                                    <a data-target="modal1" data-id="@i.uId" class="open-modal1 waves-effect waves-light btn modal-trigger" style="background-color:#ff0000"><i class="material-icons left">delete_forever</i>Delete</a>
+                                    <a data-target="modal-edit" class="open-modal-edit waves-effect waves-light btn topNav" onclick="openEdit(@i.UserName, @i.LastName, @i.FirstName)"><i class="material-icons left">mode_edit</i>Edit</a>
+                                </td>
+                            </tr>
+                        }
+                    }
+
+
+                </tbody>
+            </table>
         </div>
 
 
 
-        <table class="striped">
-            <thead>
-                <tr>
-                    <th data-field="id">Name</th>
-                    <th data-field="name">Last Name</th>
-                    <th data-field="price">Something</th>
-                    <th data-field="acttion" style="text-align:right">action</th>
-                </tr>
-            </thead>
+        <script>
+            var uId = 0;
+            $(document).on("click", ".open-modal1", function () {
+                uId = $(this).data('id');
+            });
 
-            <tbody>
-                <tr>
-                    <td>Alvin</td>
-                    <td>Eclair</td>
-                    <td>$0.87</td>
-                    <td style="text-align:right">
-                        <a data-target="modal1" class="waves-effect waves-light btn modal-trigger" style="background-color:#ff0000"><i class="material-icons left">delete_forever</i>Delete</a>
-                        <a class="waves-effect waves-light btn topNav"><i class="material-icons left">mode_edit</i>Edit</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Alan</td>
-                    <td>Jellybean</td>
-                    <td>$3.76</td>
-                    <td style="text-align:right">
-                        <a data-target="modal1" class="waves-effect waves-light btn modal-trigger" style="background-color:#ff0000"><i class="material-icons left">delete_forever</i>Delete</a>
-                        <a class="waves-effect waves-light btn topNav"><i class="material-icons left">mode_edit</i>Edit</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Jonathan</td>
-                    <td>Lollipop</td>
-                    <td>$7.00</td>
-                    <td style="text-align:right">
-                        <a data-target="modal1" class="waves-effect waves-light btn modal-trigger" style="background-color:#ff0000"><i class="material-icons left">delete_forever</i>Delete</a>
-                        <a class="waves-effect waves-light btn topNav"><i class="material-icons left">mode_edit</i>Edit</a>
-                    </td>
-                </tr>       
-            </tbody>
-        </table>
-    </div>
+            function openEdit(username, lastname, firstname) {
+                var fuck = document.findElementbyId("")
+            }
 
+            function deleteTheUser()
+            {
+                location.href = '@Url.Action("DeleteUser", "Home")?uId=' + uId;
+            }
 
-
-    <script>
-        $(document).ready(function () {
-            // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
-            jQuery.noConflict();
-            $('.modal-trigger').leanModal();
-        });
-    </script>
+            $(document).ready(function () {
+                // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+                jQuery.noConflict();
+                $('.modal-trigger').leanModal();
+            });
+        </script>
 
 </body>
 </html>
