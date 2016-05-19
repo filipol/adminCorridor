@@ -84,12 +84,13 @@ namespace AdminCorridorSystem.Controllers
             
         }
 
-        public async Task<ActionResult> EditUser(int uId, string username, string firstname, string lastname)
+        public async Task<ActionResult> EditUser(int uId, string firstname, string lastname, string email, string title)
         {
             var values = new Dictionary<string, string>();
-            values.Add("UserName", username.ToLower());
+            values.Add("Title", title);
             values.Add("FirstName", firstname);
             values.Add("LastName", lastname);
+            values.Add("Email", email);
             var content = new FormUrlEncodedContent(values);
 
             string result = await SendRequests.RunRequest("PUT", "Users/" + uId, content);
@@ -118,7 +119,9 @@ namespace AdminCorridorSystem.Controllers
                     var test = (JObject)i;
                     user.FirstName = i.SelectToken("FirstName").Value<string>(); 
                     user.UserName = i.SelectToken("UserName").Value<string>();
-                    user.LastName = i.SelectToken("FirstName").Value<string>();
+                    user.LastName = i.SelectToken("LastName").Value<string>();
+                    user.Email = i.SelectToken("Email").Value<string>();
+                    user.Title = i.SelectToken("Title").Value<string>();
                     user.uId = i.SelectToken("Id").Value<int>();
                     ManagedUsers.ManageUser.Add(user);
                 }

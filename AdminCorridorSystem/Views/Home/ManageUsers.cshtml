@@ -32,26 +32,30 @@
             <div id="modal-edit" class="modal">
                 <div class="modal-content">
                     <h4>Edit User</h4>
-
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <input value=" " id="title" type="text" class="validate">
+                            <label class="active" for="title">Title</label>
+                        </div>
+                    </div>
                     <div class="row">
                         <div class="input-field col s6">
                             <input value=" " id="first_name" type="text" class="validate">
-                            <label class="active" for="first_name2">First Name</label>
+                            <label class="active" for="first_name">First Name</label>
                         </div>
                     </div>
                     <div class="row">
                         <div class="input-field col s6">
                             <input value=" " id="last_name" type="text" class="validate">
-                            <label class="active" for="first_name2">Last Name</label>
+                            <label class="active" for="last_name">Last Name</label>
                         </div>
                     </div>
                     <div class="row">
                         <div class="input-field col s6">
-                            <input value=" " id="username" type="text" class="validate">
-                            <label class="active" for="first_name2">Username</label>
+                            <input value=" " id="email" type="text" class="validate">
+                            <label class="active" for="email">Email</label>
                         </div>
                     </div>
-
                     <div class="modal-footer">
                         <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat" onclick="editTheUser()">Confirm</a>
                         <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Cancel</a>
@@ -88,13 +92,15 @@
                                 <td>@i.UserName</td>
                                 <td>@i.FirstName</td>
                                 <td>@i.LastName</td>
+                                <td>@i.Title</td>
+                                <td>@i.Email</td>
                                 <td style="text-align:right">
                                     <a data-target="modal1" data-id="@i.uId" class="open-modal1 waves-effect waves-light btn modal-trigger" style="background-color:#ff0000"><i class="material-icons left">delete_forever</i>Delete</a>
-                                    <a data-target="modal-edit" data-id="@i.uId" data-username="@i.UserName" data-firstname="@i.FirstName" data-lastname="@i.LastName" data class="modal-edit waves-effect waves-light btn topNav modal-trigger"><i class="material-icons left">mode_edit</i>Edit</a>
+                                    <a data-target="modal-edit" data-id="@i.uId" data-username="@i.UserName" data-firstname="@i.FirstName" data-lastname="@i.LastName" data-email="@i.Email" data-title="@i.Title" class="modal-edit waves-effect waves-light btn topNav modal-trigger"><i class="material-icons left">mode_edit</i>Edit</a>
                                 </td>
                             </tr>
                         }
-                    }
+                    }                    
 
 
                 </tbody>
@@ -108,6 +114,8 @@
             var username = "";
             var firstname = "";
             var lastname = "";
+            var email = "";
+            var title = "";
 
             $(document).on("click", ".open-modal1", function () {
                 uId = $(this).data('id');
@@ -118,9 +126,13 @@
                 username = $(this).data("username");
                 firstname = $(this).data("firstname");
                 lastname = $(this).data("lastname");
+                email = $(this).data("email");
+                title = $(this).data("title");
                 $("#first_name").val(firstname);
                 $("#last_name").val(lastname);
                 $("#username").val(username);
+                $("#email").val(email);
+                $("#title").val(title);
             });
 
             function deleteTheUser()
@@ -129,10 +141,11 @@
             }
 
             function editTheUser() {
-                username = $("#username").val();
                 firstname = $("#first_name").val();
                 lastname = $("#last_name").val();
-                location.href = '@Url.Action("EditUser", "Home")?uId=' + uId + '&username=' + username + '&firstname=' + firstname + '&lastname=' + lastname;
+                title = $("#title").val();
+                email = $("#email").val();
+                location.href = '@Url.Action("EditUser", "Home")?uId=' + uId + '&firstname=' + firstname + '&lastname=' + lastname + '&email=' + email + '&title=' + title;
             }
 
             $(document).ready(function () {
