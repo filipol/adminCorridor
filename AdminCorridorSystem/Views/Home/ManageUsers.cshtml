@@ -32,35 +32,28 @@
             <div id="modal-edit" class="modal">
                 <div class="modal-content">
                     <h4>Edit User</h4>
-                    <form class="col s12">
-                        <div class="row">
-                            <div class="input-field col s6">
-                                <input value="" id="first_name" type="text" class="validate">
-                                <label class="active" for="first_name2">First Name</label>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="input-field col s6">
-                                <input value="" id="last_name" type="text" class="validate">
-                                <label class="active" for="first_name2">Last Name</label>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="input-field col s6">
-                                <input value="" id="username" type="text" class="validate">
-                                <label class="active" for="first_name2">Username</label>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="input-field col s6">
-                                <input value="" id="password" type="text" class="validate">
-                                <label class="active" for="first_name2">Password</label>
-                            </div>
-                        </div>
-                    </form>
-                    <div class="modal-footer">
 
-                        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat" onclick="deleteTheUser()">Confirm</a>
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <input value=" " id="first_name" type="text" class="validate">
+                            <label class="active" for="first_name2">First Name</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <input value=" " id="last_name" type="text" class="validate">
+                            <label class="active" for="first_name2">Last Name</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <input value=" " id="username" type="text" class="validate">
+                            <label class="active" for="first_name2">Username</label>
+                        </div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat" onclick="editTheUser()">Confirm</a>
                         <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Cancel</a>
                     </div>
                 </div>
@@ -97,7 +90,7 @@
                                 <td>@i.LastName</td>
                                 <td style="text-align:right">
                                     <a data-target="modal1" data-id="@i.uId" class="open-modal1 waves-effect waves-light btn modal-trigger" style="background-color:#ff0000"><i class="material-icons left">delete_forever</i>Delete</a>
-                                    <a data-target="modal-edit" class="open-modal-edit waves-effect waves-light btn topNav" onclick="openEdit(@i.UserName, @i.LastName, @i.FirstName)"><i class="material-icons left">mode_edit</i>Edit</a>
+                                    <a data-target="modal-edit" data-id="@i.uId" data-username="@i.UserName" data-firstname="@i.FirstName" data-lastname="@i.LastName" data class="modal-edit waves-effect waves-light btn topNav modal-trigger"><i class="material-icons left">mode_edit</i>Edit</a>
                                 </td>
                             </tr>
                         }
@@ -112,17 +105,34 @@
 
         <script>
             var uId = 0;
+            var username = "";
+            var firstname = "";
+            var lastname = "";
+
             $(document).on("click", ".open-modal1", function () {
                 uId = $(this).data('id');
             });
 
-            function openEdit(username, lastname, firstname) {
-                var fuck = document.findElementbyId("")
-            }
+            $(document).on("click", ".modal-edit", function () {
+                uId = $(this).data('id');
+                username = $(this).data("username");
+                firstname = $(this).data("firstname");
+                lastname = $(this).data("lastname");
+                $("#first_name").val(firstname);
+                $("#last_name").val(lastname);
+                $("#username").val(username);
+            });
 
             function deleteTheUser()
             {
                 location.href = '@Url.Action("DeleteUser", "Home")?uId=' + uId;
+            }
+
+            function editTheUser() {
+                username = $("#username").val();
+                firstname = $("#first_name").val();
+                lastname = $("#last_name").val();
+                location.href = '@Url.Action("EditUser", "Home")?uId=' + uId + '&username=' + username + '&firstname=' + firstname + '&lastname=' + lastname;
             }
 
             $(document).ready(function () {

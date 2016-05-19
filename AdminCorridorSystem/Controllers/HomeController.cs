@@ -84,6 +84,26 @@ namespace AdminCorridorSystem.Controllers
             
         }
 
+        public async Task<ActionResult> EditUser(int uId, string username, string firstname, string lastname)
+        {
+            var values = new Dictionary<string, string>();
+            values.Add("UserName", username.ToLower());
+            values.Add("FirstName", firstname);
+            values.Add("LastName", lastname);
+            var content = new FormUrlEncodedContent(values);
+
+            string result = await SendRequests.RunRequest("PUT", "Users/" + uId, content);
+
+            if (result != "ERROR")
+            {
+                return RedirectToAction("Index", "Home");
+            }
+            else
+            {
+                return RedirectToAction("Index", "Login");
+            }
+        }
+
         public async Task<ActionResult> GetUsers(int type)
         {
             string result = await SendRequests.RunRequest("GET", "Users/"+ type, null);
