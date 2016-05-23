@@ -10,49 +10,81 @@
     <link href='../lib/fullcalendar.css' rel='stylesheet' />
     <link href='../lib/fullcalendar.print.css' rel='stylesheet' media='print' />
     <script src='../lib/moment.min.js'></script>
-    <script src='../lib/jquery.min.js'></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src='../lib/fullcalendar.min.js'></script>
 
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
-    @*<div class="navbar navbar-fixed-top topNav">
-            <div class="container displaySize">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                </div>
-                <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                        <a href="/Home/Index" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Home"><span class="material-icons icons">home</span></a>
-                        <li>@Html.ActionLink("About", "About", "Home")</li>
-                        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                    </ul>
-                </div>
-            </div>
-        </div>*@
 
-
-    <nav class="navbar navbar-fixed-top topNav">
-        <a href="#" data-activates="slide-out" class="button-collapse"><span class="material-icons icons">home</span></a>
-        <ul id="slide-out" class="side-nav sideNav">
-            <li><a href="/Home/Index"><span class="material-icons icons">home</span>Home</a></li>
-            <li><a href="/Home/AddUser"><span class="material-icons icons">person_add</span></a></li>
-            <li><a href="/Home/Schedule"><span class="material-icons icons">schedule</span></a></li>
-            <li><a href="/Home/ManageUsers"><span class="material-icons icons">group</span></a></li>
+    <nav class="blue lighten-2">
+        <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+        <ul class="left side-nav blue lighten-2 center" id="slide-out">
+            <li><a href="/Home/Index"><i class="small material-icons">home</i></a></li>
+            <li><a href="/Home/Schedule"><i class="small material-icons">schedule</i></a></li>
+            <li><a href="/Home/ManageUsers"><i class="small material-icons">group</i></a></li>
+            <li><a data-target="modal-register" class="modal-trigger modal-register"><i class="small material-icons">person_add</i></a></li>
         </ul>
-
+        <ul class="left hide-on-med-and-down">
+            <li><a href="/Home/Index"><i class="small material-icons">home</i></a></li>
+            <li><a href="/Home/Schedule"><i class="small material-icons">schedule</i></a></li>
+            <li><a href="/Home/ManageUsers"><i class="small material-icons">group</i></a></li>
+            <li><a data-target="modal-register" class="modal-trigger modal-register"><i class="small material-icons">person_add</i></a></li>
+        </ul>
     </nav>
 
+    <div id="modal-register" class="modal">
+        <div class="modal-content">
+            <h4>Register User</h4>
+            <div class="row">
+                <div class="input-field col s6">
+                    <input value="" id="title" type="text" class="validate">
+                    <label class="active" for="title">Title</label>
+                </div>
+                <div class="input-field col s6">
+                    <input value="" id="usertype" type="text" class="validate">
+                    <label class="active" for="usertype">Usertype</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s6">
+                    <input value="" id="first_name" type="text" class="validate">
+                    <label class="active" for="first_name">First Name</label>
+                </div>
+                <div class="input-field col s6">
+                    <input value="" id="username" type="text" class="validate">
+                    <label class="active" for="username">Username</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s6">
+                    <input value="" id="last_name" type="text" class="validate">
+                    <label class="active" for="last_name">Last Name</label>
+                </div>
+                <div class="input-field col s6">
+                    <input value="" id="password" type="password" class="validate">
+                    <label class="active" for="password">Password</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s6">
+                    <input value="" id="email" type="text" class="validate">
+                    <label class="active" for="email">Email</label>
+                </div>
+                <div class="input-field col s6">
+                    <input value="" id="confirmpassword" type="password" class="validate">
+                    <label class="active" for="confirmpassword">Confirm password</label>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat" onclick="editTheUser()">Confirm</a>
+                <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Cancel</a>
+            </div>
+        </div>
+    </div>
 
-
-
-    <div class="container body-content something">
+    <div>
         @RenderBody()
         <hr />
         <footer>
@@ -60,35 +92,40 @@
         </footer>
     </div>
 
-    <div>
-        <ul id="slide-out" class="side-nav fixed sideNav">
-            <li style="padding-top:50px">
-                <a href="/Home/Index" class="tooltipped" data-position="right" data-delay="50" data-tooltip="Home"><span class="material-icons icons">home</span></a>
-            </li>
-            <li>
-                <a href="/Home/AddUser" class="tooltipped" data-position="right" data-delay="50" data-tooltip="Add user"><span class="material-icons icons">person_add</span></a>
-            </li>
-            <li>
-                <a href="/Home/ManageUsers" class="tooltipped" data-position="right" data-delay="50" data-tooltip="Manage users"><span class="material-icons icons">group</span></a>
-            </li>
-        </ul>
-    </div>
-
 
     <script>
+        var username = "";
+        var firstname = "";
+        var lastname = "";
+        var email = "";
+        var title = "";
+        var usertype = 0;
+        var password = "";
+        var confirmpassword = "";
         $(".button-collapse").sideNav();
 
         $('body').on('click', '.button-collapse', function () {
             window.alert('too bad :(. This event will never be triggered because the sideNav is stopping propagation.');
         });
+
+        $(document).ready(function () {
+            $('.modal-trigger').leanModal();
+        });
+
+        function registerUser() {
+            username = $("#username").val();
+            password = $("#password").val();
+            confirmPassword = $("#confirmpassword").val();
+            usertype = Int($("#usertype").val());
+            title = $("#title").val();
+            firstname = $("#first_name").val();
+            lastname = $("#last_name").val();
+            email = $("#email").val();
+            location.href = '@Url.Action("RegisterUser", "Home")?username=' + username + '&password=' + password + '&confirmpassword=' + confirmpassword + '&usertype=' + usertype + '&title=' + title + '&firstname=' + firstname + '&lastname=' + lastname + '&email=' + email;
+        }
     </script>
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
+    @*@Scripts.Render("~/bundles/jquery")*@
     @RenderSection("scripts", required: false)
-
-
-
-
 </body>
 </html>

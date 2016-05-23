@@ -76,7 +76,7 @@ namespace AdminCorridorSystem.Controllers
         public async Task<ActionResult> DeleteUser(int uId)
         {
             
-            string result = await SendRequests.RunRequest("DELETE", "api/Users/" + uId, null);
+            string result = await SendRequests.RunRequest("DELETE", "Users/" + uId, null);
 
             if (result != "ERROR")
             {
@@ -103,7 +103,7 @@ namespace AdminCorridorSystem.Controllers
 
             if (result != "ERROR")
             {
-                return View("ManageUsers");
+                return RedirectToAction("ManageUsers", "Home");
             }
             else
             {

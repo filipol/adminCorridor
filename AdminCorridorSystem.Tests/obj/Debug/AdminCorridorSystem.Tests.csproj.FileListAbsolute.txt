@@ -153,3 +153,41 @@ C:\Users\laje1333\Desktop\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\Syst
 C:\Users\laje1333\Desktop\adminCorridor\AdminCorridorSystem.Tests\obj\Debug\AdminCorridorSystem.Tests.csprojResolveAssemblyReference.cache
 C:\Users\laje1333\Desktop\adminCorridor\AdminCorridorSystem.Tests\obj\Debug\AdminCorridorSystem.Tests.dll
 C:\Users\laje1333\Desktop\adminCorridor\AdminCorridorSystem.Tests\obj\Debug\AdminCorridorSystem.Tests.pdb
+C:\Users\bjvi1337\Documents\Visual Studio 2013\Projects\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\ApplicationInsights.config
+C:\Users\bjvi1337\Documents\Visual Studio 2013\Projects\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\roslyn\csc.exe
+C:\Users\bjvi1337\Documents\Visual Studio 2013\Projects\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\bjvi1337\Documents\Visual Studio 2013\Projects\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\bjvi1337\Documents\Visual Studio 2013\Projects\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\bjvi1337\Documents\Visual Studio 2013\Projects\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\bjvi1337\Documents\Visual Studio 2013\Projects\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\bjvi1337\Documents\Visual Studio 2013\Projects\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\bjvi1337\Documents\Visual Studio 2013\Projects\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\roslyn\System.Collections.Immutable.dll
+C:\Users\bjvi1337\Documents\Visual Studio 2013\Projects\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\roslyn\System.Reflection.Metadata.dll
+C:\Users\bjvi1337\Documents\Visual Studio 2013\Projects\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\roslyn\vbc.exe
+C:\Users\bjvi1337\Documents\Visual Studio 2013\Projects\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\roslyn\VBCSCompiler.exe
+C:\Users\bjvi1337\Documents\Visual Studio 2013\Projects\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\roslyn\VBCSCompiler.exe.config
+C:\Users\bjvi1337\Documents\Visual Studio 2013\Projects\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\AdminCorridorSystem.Tests.dll.config
+C:\Users\bjvi1337\Documents\Visual Studio 2013\Projects\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\AdminCorridorSystem.Tests.dll
+C:\Users\bjvi1337\Documents\Visual Studio 2013\Projects\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\AdminCorridorSystem.Tests.pdb
+C:\Users\bjvi1337\Documents\Visual Studio 2013\Projects\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\AdminCorridorSystem.dll
+C:\Users\bjvi1337\Documents\Visual Studio 2013\Projects\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\bjvi1337\Documents\Visual Studio 2013\Projects\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\Newtonsoft.Json.dll
+C:\Users\bjvi1337\Documents\Visual Studio 2013\Projects\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\System.Web.Helpers.dll
+C:\Users\bjvi1337\Documents\Visual Studio 2013\Projects\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\System.Web.Mvc.dll
+C:\Users\bjvi1337\Documents\Visual Studio 2013\Projects\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\System.Web.Razor.dll
+C:\Users\bjvi1337\Documents\Visual Studio 2013\Projects\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Users\bjvi1337\Documents\Visual Studio 2013\Projects\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\System.Web.WebPages.dll
+C:\Users\bjvi1337\Documents\Visual Studio 2013\Projects\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Users\bjvi1337\Documents\Visual Studio 2013\Projects\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\System.Web.Optimization.dll
+C:\Users\bjvi1337\Documents\Visual Studio 2013\Projects\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\AdminCorridorSystem.pdb
+C:\Users\bjvi1337\Documents\Visual Studio 2013\Projects\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\Newtonsoft.Json.xml
+C:\Users\bjvi1337\Documents\Visual Studio 2013\Projects\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\System.Web.Helpers.xml
+C:\Users\bjvi1337\Documents\Visual Studio 2013\Projects\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\System.Web.Mvc.xml
+C:\Users\bjvi1337\Documents\Visual Studio 2013\Projects\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\System.Web.Razor.xml
+C:\Users\bjvi1337\Documents\Visual Studio 2013\Projects\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\System.Web.WebPages.xml
+C:\Users\bjvi1337\Documents\Visual Studio 2013\Projects\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\Users\bjvi1337\Documents\Visual Studio 2013\Projects\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\System.Web.WebPages.Razor.xml
+C:\Users\bjvi1337\Documents\Visual Studio 2013\Projects\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\System.Web.Optimization.xml
+C:\Users\bjvi1337\Documents\Visual Studio 2013\Projects\adminCorridor\AdminCorridorSystem.Tests\obj\Debug\AdminCorridorSystem.Tests.csprojResolveAssemblyReference.cache
+C:\Users\bjvi1337\Documents\Visual Studio 2013\Projects\adminCorridor\AdminCorridorSystem.Tests\obj\Debug\AdminCorridorSystem.Tests.dll
+C:\Users\bjvi1337\Documents\Visual Studio 2013\Projects\adminCorridor\AdminCorridorSystem.Tests\obj\Debug\AdminCorridorSystem.Tests.pdb
