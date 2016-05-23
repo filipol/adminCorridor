@@ -7,54 +7,53 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
           rel="stylesheet">
 
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
-
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
+    @*<div class="navbar navbar-fixed-top topNav">
+            <div class="container displaySize">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                        <a href="/Home/Index" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Home"><span class="material-icons icons">home</span></a>
+                        <li>@Html.ActionLink("About", "About", "Home")</li>
+                        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    </ul>
+                </div>
+            </div>
+        </div>*@
 
-    <nav>
-        <ul class="hide-on-med-and-down">
-            <li><a href="#!">First Sidebar Link</a></li>
-            <li><a href="#!">Second Sidebar Link</a></li>
+
+    <nav class="navbar navbar-fixed-top topNav">
+        <a href="#" data-activates="slide-out" class="button-collapse"><span class="material-icons icons">home</span></a>
+        <ul id="slide-out" class="side-nav sideNav">
+            <li><a href="/Home/Index"><span class="material-icons icons">home</span>Home</a></li>
+            <li><a href="/Home/AddUser"><span class="material-icons icons">person_add</span></a></li>
+            <li><a href="/Home/ManageUsers"><span class="material-icons icons">group</span></a></li>
         </ul>
-        <ul id="slide-out" class="side-nav fixed">
-            <li class="bold"><a href="#!" class="waves-effect waves-teal">First Sidebar Link</a></li>
-            <li class="bold"><a href="#!" class="">Second Sidebar Link</a></li>
-            <li class="no-padding">
-                <ul class="collapsible collapsible-accordion">
-                    <li>
-                        <a class="collapsible-header waves-effect waves-teal">Dropdown<i class="mdi-navigation-arrow-drop-down"></i></a>
-                        <div class="collapsible-body">
-                            <ul>
-                                <li><a href="#!">First</a></li>
-                                <li><a href="#!">Second</a></li>
-                                <li><a href="#!">Third</a></li>
-                                <li><a href="#!">Fourth</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                </ul>
-            </li>
-        </ul>
-        <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+
     </nav>
-    
+
+
+
+
     <div class="container body-content something">
         @RenderBody()
         <hr />
-
         <footer>
             <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
         </footer>
     </div>
-    
 
-    @*<div>
+    <div>
         <ul id="slide-out" class="side-nav fixed sideNav">
             <li style="padding-top:50px">
                 <a href="/Home/Index" class="tooltipped" data-position="right" data-delay="50" data-tooltip="Home"><span class="material-icons icons">home</span></a>
@@ -66,25 +65,22 @@
                 <a href="/Home/ManageUsers" class="tooltipped" data-position="right" data-delay="50" data-tooltip="Manage users"><span class="material-icons icons">group</span></a>
             </li>
         </ul>
-    </div>*@
-    
+    </div>
 
 
+    <script>
+        $(".button-collapse").sideNav();
+
+        $('body').on('click', '.button-collapse', function () {
+            window.alert('too bad :(. This event will never be triggered because the sideNav is stopping propagation.');
+        });
+    </script>
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
 
-    <script>
 
-        $('.button-collapse').sideNav({
-            menuWidth: 300, // Default is 240
-            closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
-        }
-      );
-        $('.collapsible').collapsible();
-        
-    </script>
 
 
 </body>
