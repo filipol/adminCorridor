@@ -17,7 +17,7 @@
         <div class="wrapper contentPadding">
 
             <!-- Modal Structure -->
-            <div id="modal1" class="modal">
+            <div id="modal-delete" class="modal">
                 <div class="modal-content">
                     <h4>Delete User</h4>
                     <p>Are you sure you whant to delete the user?</p>
@@ -25,6 +25,18 @@
                         
                         <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat" onclick="deleteTheUser()">Confirm</a>
                         <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Cancel</a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="modal-error" class="modal">
+                <div class="modal-content">
+                    <h4>Error</h4>
+                    <div class="row">
+                        <input id="error" class="alert-info" value=""/>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Ok</a>
                     </div>
                 </div>
             </div>
@@ -95,7 +107,7 @@
                                 <td>@i.Title</td>
                                 <td>@i.Email</td>
                                 <td style="text-align:right">
-                                    <a data-target="modal1" data-id="@i.uId" class="open-modal1 waves-effect waves-light btn modal-trigger" style="background-color:#ff0000"><i class="material-icons left">delete_forever</i>Delete</a>
+                                    <a data-target="modal-delete" data-id="@i.uId" class="modal-delete waves-effect waves-light btn modal-trigger" style="background-color:#ff0000"><i class="material-icons left">delete_forever</i>Delete</a>
                                     <a data-target="modal-edit" data-id="@i.uId" data-username="@i.UserName" data-firstname="@i.FirstName" data-lastname="@i.LastName" data-email="@i.Email" data-title="@i.Title" class="modal-edit waves-effect waves-light btn topNav modal-trigger"><i class="material-icons left">mode_edit</i>Edit</a>
                                 </td>
                             </tr>
@@ -116,8 +128,16 @@
             var lastname = "";
             var email = "";
             var title = "";
+            var usertype = 0;
+            var password = "";
+            var confirmpassword = "";
+            var errorMessage = ViewData["errorMessage"];
 
-            $(document).on("click", ".open-modal1", function () {
+            $(document).on("click", ".modal-error", function () {
+                $("#error").val(errorMessage);
+            });
+
+            $(document).on("click", ".modal-delete", function () {
                 uId = $(this).data('id');
             });
 
@@ -135,6 +155,9 @@
                 $("#title").val(title);
             });
 
+            $(document).on("click", ".modal-register", function () {
+            });
+
             function deleteTheUser()
             {
                 location.href = '@Url.Action("DeleteUser", "Home")?uId=' + uId;
@@ -146,6 +169,18 @@
                 title = $("#title").val();
                 email = $("#email").val();
                 location.href = '@Url.Action("EditUser", "Home")?uId=' + uId + '&firstname=' + firstname + '&lastname=' + lastname + '&email=' + email + '&title=' + title;
+            }
+
+            function registerUser() {
+                username = $("#username").val();
+                password = $("#password").val();
+                title = $("#confirmpassword").val();
+                usertype = Int($("#usertype").val());
+                title = $("#title").val();
+                firstname = $("#first_name").val();
+                lastname = $("#last_name").val();
+                email = $("#email").val();
+                location.href = '@Url.Action("RegisterUser", "Home")?username=' + username + '&password=' + password + '&confirmpassword=' + confirmpassword + '&usertype=' + usertype + '&title=' + title + '&firstname=' + firstname + '&lastname=' + lastname + '&email=' + email;
             }
 
             $(document).ready(function () {

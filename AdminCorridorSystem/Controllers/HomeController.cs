@@ -103,11 +103,12 @@ namespace AdminCorridorSystem.Controllers
 
             if (result != "ERROR")
             {
-                return RedirectToAction("Index", "Home");
+                return View("ManageUsers");
             }
             else
             {
-                return RedirectToAction("Index", "Login");
+                ViewData["errorMessage"] = "An error occurred when editing the user.";
+                return View("ManageUsers", ViewData["errorMessage"]);
             }
         }
 
