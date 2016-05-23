@@ -46,12 +46,16 @@ namespace AdminCorridorSystem.Controllers
         {
             return View();
         }
-        public ActionResult Schedule()
+        public async Task<ActionResult> Schedule()
         {
+            var stringId = CheckCookieForToken.GetCookie("ScheduleId");
+            int id = Convert.ToInt32(stringId);
+
+            await GetSchedule(id);
             return View();
         }
 
-        
+
         public async Task<ActionResult> ManageUsers()
         {
             await GetUsers(1);
@@ -72,10 +76,42 @@ namespace AdminCorridorSystem.Controllers
             return View();
         }
 
+        public async Task<ActionResult> GetSchedule(int id)
+        {
+            string result = await SendRequests.RunRequest("GET", "Schedule/" + id, null);
+
+            if (result != "ERROR")
+            {
+                var events = (JArray)JsonConvert.DeserializeObject(result);
+                ScheduleViewModal sch = new ScheduleViewModal();
+                foreach (var i in events)
+                {
+                    Events ev = new Events();
+
+                    ev.DTEnd = i.SelectToken("DTEnd").Value<DateTime>();
+                    ev.DTStamp = i.SelectToken("DTStamp").Value<DateTime>();
+                    ev.DTStart = i.SelectToken("DTStart").Value<DateTime>();
+                    ev.Duration = i.SelectToken("Duration").Value<TimeSpan>();
+                    ev.externalId = i.SelectToken("externalId").Value<string>();
+                    ev.Id = i.SelectToken("Id").Value<int>();
+                    ev.LastModified = i.SelectToken("LastModified").Value<DateTime>();
+                    ev.Location = i.SelectToken("Location").Value<string>();
+                    ev.Summary = i.SelectToken("Summary").Value<string>();
+                    sch.Schedule.Add(ev);
+                }
+
+
+                return View("Schedule", sch);
+            }
+            else
+            {
+                return View("Index", "Login");
+            }
+        }
 
         public async Task<ActionResult> DeleteUser(int uId)
         {
-            
+
             string result = await SendRequests.RunRequest("DELETE", "api/Users/" + uId, null);
 
             if (result != "ERROR")
@@ -87,7 +123,7 @@ namespace AdminCorridorSystem.Controllers
             {
                 return View("ManageUsers");
             }
-            
+
         }
 
         public async Task<ActionResult> EditUser(int uId, string firstname, string lastname, string email, string title)
@@ -114,7 +150,7 @@ namespace AdminCorridorSystem.Controllers
 
         public async Task<ActionResult> GetUsers(int type)
         {
-            string result = await SendRequests.RunRequest("GET", "Users/"+ type, null);
+            string result = await SendRequests.RunRequest("GET", "Users/" + type, null);
 
             if (result != "ERROR")
             {
@@ -123,8 +159,8 @@ namespace AdminCorridorSystem.Controllers
                 foreach (var i in users)
                 {
                     Users user = new Users();
-                    var test = (JObject)i;
-                    user.FirstName = i.SelectToken("FirstName").Value<string>(); 
+
+                    user.FirstName = i.SelectToken("FirstName").Value<string>();
                     user.UserName = i.SelectToken("UserName").Value<string>();
                     user.LastName = i.SelectToken("LastName").Value<string>();
                     user.Email = i.SelectToken("Email").Value<string>();
@@ -132,15 +168,15 @@ namespace AdminCorridorSystem.Controllers
                     user.uId = i.SelectToken("Id").Value<int>();
                     ManagedUsers.ManageUser.Add(user);
                 }
-                
-                
-                return View("ManageUsers", ManagedUsers);  
+
+
+                return View("ManageUsers", ManagedUsers);
             }
             else
             {
                 return View();
             }
-            
+
         }
     }
 }

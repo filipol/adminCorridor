@@ -7,6 +7,9 @@ using System.Web;
 using System.Web.Mvc;
 using System.Net;
 using System.Net.Http;
+using System.Net.Http.Headers;
+using Newtonsoft.Json.Linq;
+using Newtonsoft.Json;
 
 namespace AdminCorridorSystem.Controllers
 {
@@ -31,7 +34,16 @@ namespace AdminCorridorSystem.Controllers
 
             if(result != "ERROR")
             {
-                return RedirectToAction("Index", "Home");
+                string res = await SendRequests.RunRequest("GET", "User", null);
+                if(res != "ERROR")
+                {
+                    return RedirectToAction("Index", "Home");
+                }
+                else
+                {
+                    return RedirectToAction("Index", "Login");
+                }
+                
             }
             else
             {
