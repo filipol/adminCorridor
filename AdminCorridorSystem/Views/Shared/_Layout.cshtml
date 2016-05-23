@@ -6,6 +6,12 @@
     @*<title>@ViewBag.Title - My ASP.NET Application</title>*@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
           rel="stylesheet">
+    
+    <link href='../lib/fullcalendar.css' rel='stylesheet' />
+    <link href='../lib/fullcalendar.print.css' rel='stylesheet' media='print' />
+    <script src='../lib/moment.min.js'></script>
+    <script src='../lib/jquery.min.js'></script>
+    <script src='../lib/fullcalendar.min.js'></script>
 
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
@@ -37,6 +43,7 @@
         <ul id="slide-out" class="side-nav sideNav">
             <li><a href="/Home/Index"><span class="material-icons icons">home</span>Home</a></li>
             <li><a href="/Home/AddUser"><span class="material-icons icons">person_add</span></a></li>
+            <li><a href="/Home/Schedule"><span class="material-icons icons">schedule</span></a></li>
             <li><a href="/Home/ManageUsers"><span class="material-icons icons">group</span></a></li>
         </ul>
 
