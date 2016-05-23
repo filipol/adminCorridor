@@ -210,7 +210,6 @@ C:\Users\axel_\Desktop\Jesper remove if needed\adminCorridor-adding-logic\AdminC
 C:\Users\axel_\Desktop\Jesper remove if needed\adminCorridor-adding-logic\AdminCorridorSystem\bin\System.Web.WebPages.Razor.xml
 C:\Users\axel_\Desktop\Jesper remove if needed\adminCorridor-adding-logic\AdminCorridorSystem\bin\Antlr3.Runtime.pdb
 C:\Users\axel_\Desktop\Jesper remove if needed\adminCorridor-adding-logic\AdminCorridorSystem\bin\Newtonsoft.Json.xml
-C:\Users\axel_\Desktop\Jesper remove if needed\adminCorridor-adding-logic\AdminCorridorSystem\obj\Debug\AdminCorridorSystem.csprojResolveAssemblyReference.cache
 C:\Users\axel_\Desktop\Jesper remove if needed\adminCorridor-adding-logic\AdminCorridorSystem\obj\Debug\AdminCorridorSystem.dll
 C:\Users\axel_\Desktop\Jesper remove if needed\adminCorridor-adding-logic\AdminCorridorSystem\obj\Debug\AdminCorridorSystem.pdb
 C:\Users\Viktor\Documents\Visual Studio 2015\Projects\adminCorridor\AdminCorridorSystem\bin\ApplicationInsights.config
@@ -268,3 +267,4 @@ C:\Users\Viktor\Documents\Visual Studio 2015\Projects\adminCorridor\AdminCorrido
 C:\Users\Viktor\Documents\Visual Studio 2015\Projects\adminCorridor\AdminCorridorSystem\obj\Debug\AdminCorridorSystem.dll
 C:\Users\Viktor\Documents\Visual Studio 2015\Projects\adminCorridor\AdminCorridorSystem\obj\Debug\AdminCorridorSystem.pdb
 C:\Users\Viktor\Documents\Visual Studio 2015\Projects\adminCorridor\AdminCorridorSystem\obj\Debug\AdminCorridorSystem.csprojResolveAssemblyReference.cache
+C:\Users\axel_\Desktop\Jesper remove if needed\adminCorridor-adding-logic\AdminCorridorSystem\obj\Debug\AdminCorridorSystem.csprojResolveAssemblyReference.cache

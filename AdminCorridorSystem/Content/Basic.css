@@ -2,6 +2,9 @@
    .contentPadding {
         padding-left:50px !important;
     }
+    .LoginImageSize{
+        width:200px !important;
+    }
 }
 @media only screen and (max-width: 1280px){
     .something {

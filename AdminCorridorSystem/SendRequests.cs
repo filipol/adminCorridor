@@ -122,15 +122,19 @@ namespace AdminCorridorSystem
                         using (var client = new HttpClient())
                         {
                             var response = await client.PostAsync(baseURL + apiEnd, body);
-
+                            
                             if (response.StatusCode == HttpStatusCode.OK)
                             {
                                 var stringResponse = response.Content.ReadAsStringAsync().Result;
 
                                 var token = (JObject)JsonConvert.DeserializeObject(stringResponse);
                                 var tok = token.First.First.Value<string>();
+                                var dTNow = DateTime.Now;
+                                var exp = dTNow + TimeSpan.FromDays(14);
+
                                 HttpContext.Current.Response.Cookies.Set(new HttpCookie("AccessToken")
                                 {
+                                    Expires = exp,
                                     Value = tok,
                                     HttpOnly = true,
 

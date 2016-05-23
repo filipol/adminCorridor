@@ -46,6 +46,12 @@ namespace AdminCorridorSystem.Controllers
         {
             return View();
         }
+        public ActionResult Schedule()
+        {
+            return View();
+        }
+
+        
         public async Task<ActionResult> ManageUsers()
         {
             await GetUsers(1);
