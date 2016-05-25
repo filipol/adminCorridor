@@ -83,28 +83,58 @@ namespace AdminCorridorSystem
                     
 
             }
+            else if (typeOfReq == "PUT")
+            {
+                using (var client = new HttpClient())
+                {
+
+                    if (HttpContext.Current.Request.Cookies != null && client.DefaultRequestHeaders.Authorization == null)
+                    {
+                        var test = HttpContext.Current.Request.Cookies["AccessToken"].Value;
+                        client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", HttpContext.Current.Request.Cookies["AccessToken"].Value);
+                    }
+                    try
+                    {
+                        var response = await client.PutAsync(baseURL + apiEnd, body);
+
+                        if (response.StatusCode == HttpStatusCode.OK)
+                        {
+                            var stringResponse = response.Content.ReadAsStringAsync();
+                            return stringResponse.ToString();
+                        }
+                        else
+                        {
+                            return "ERROR";
+                        }
+                    }
+                    catch (OperationCanceledException)
+                    {
+                        return null;
+                    }
+                }
+            }
             else if (typeOfReq == "POST")
             {
                 if (apiEnd == "Token")
                 {
                     try
                     {
-                        var cookieContainer = new CookieContainer();
-
-
-                        using (var handler = new HttpClientHandler() { CookieContainer = cookieContainer })
-                        using (var client = new HttpClient(handler) { BaseAddress = baseURL })
+                        using (var client = new HttpClient())
                         {
                             var response = await client.PostAsync(baseURL + apiEnd, body);
-
+                            
                             if (response.StatusCode == HttpStatusCode.OK)
                             {
                                 var stringResponse = response.Content.ReadAsStringAsync().Result;
 
                                 var token = (JObject)JsonConvert.DeserializeObject(stringResponse);
                                 var tok = token.First.First.Value<string>();
+                                var dTNow = DateTime.Now;
+                                var exp = dTNow + TimeSpan.FromDays(14);
+
                                 HttpContext.Current.Response.Cookies.Set(new HttpCookie("AccessToken")
                                 {
+                                    Expires = exp,
                                     Value = tok,
                                     HttpOnly = true,
 

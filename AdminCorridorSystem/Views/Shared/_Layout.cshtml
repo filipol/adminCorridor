@@ -6,59 +6,57 @@
     @*<title>@ViewBag.Title - My ASP.NET Application</title>*@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
           rel="stylesheet">
+    
+    <link href='../lib/fullcalendar.css' rel='stylesheet' />
+    <link href='../lib/fullcalendar.print.css' rel='stylesheet' media='print' />
+    <script src='../lib/moment.min.js'></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src='../lib/fullcalendar.min.js'></script>
 
-    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/Site.css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
-    <div class="navbar navbar-fixed-top topNav">
-        <div class="container displaySize">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <a href="/Home/Index" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Home"><span class="material-icons icons">home</span></a>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                </ul>
-            </div>       
-        </div>
-    </div>
 
-    <div class="container body-content something">
+    <nav class="blue lighten-2">
+        <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+        <ul class="left side-nav blue lighten-2 center" id="slide-out">
+            <li><a href="/Home/Index" class=""><i class="icon-white small material-icons">home</i></a></li>
+            <li><a href="/Home/Schedule"><i class="icon-white small material-icons">schedule</i></a></li>
+            <li><a href="/Home/ManageUsers"><i class="icon-white small material-icons">group</i></a></li>
+        </ul>
+        <ul class="left hide-on-med-and-down">
+            <li><a href="/Home/Index"><i class="material-icons">home</i></a></li>
+            <li><a href="/Home/Schedule"><i class="small material-icons">schedule</i></a></li>
+            <li><a href="/Home/ManageUsers"><i class="small material-icons">group</i></a></li>
+        </ul>
+    </nav>
+
+    <div>
         @RenderBody()
-        <hr />
         <footer>
             <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
         </footer>
     </div>
 
-    <div>
-        <ul id="slide-out" class="side-nav fixed sideNav">
-            <li style="padding-top:50px">
-                <a href="/Home/Index" class="tooltipped" data-position="right" data-delay="50" data-tooltip="Home"><span class="material-icons icons">home</span></a>
-            </li>
-            <li>
-                <a href="/Home/AddUser" class="tooltipped" data-position="right" data-delay="50" data-tooltip="Add user"><span class="material-icons icons">person_add</span></a>
-            </li>
-            <li>
-                <a href="/Home/ManageUsers" class="tooltipped" data-position="right" data-delay="50" data-tooltip="Manage users"><span class="material-icons icons">group</span></a>
-            </li>
-        </ul>
-    </div>
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
+    <script>
+        var username = "";
+        var firstname = "";
+        var lastname = "";
+        var email = "";
+        var title = "";
+        var usertype = 0;
+        var password = "";
+        var confirmpassword = "";
+        $(".button-collapse").sideNav();
+
+        $('body').on('click', '.button-collapse', function () {
+            window.alert('too bad :(. This event will never be triggered because the sideNav is stopping propagation.');
+        });
+    </script>
+
+    @*@Scripts.Render("~/bundles/jquery")*@
     @RenderSection("scripts", required: false)
-
-
-
-
 </body>
 </html>

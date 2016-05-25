@@ -46,6 +46,12 @@ namespace AdminCorridorSystem.Controllers
         {
             return View();
         }
+        public ActionResult Schedule()
+        {
+            return View();
+        }
+
+        
         public async Task<ActionResult> ManageUsers()
         {
             await GetUsers(1);
@@ -70,7 +76,7 @@ namespace AdminCorridorSystem.Controllers
         public async Task<ActionResult> DeleteUser(int uId)
         {
             
-            string result = await SendRequests.RunRequest("DELETE", "api/Users/" + uId, null);
+            string result = await SendRequests.RunRequest("DELETE", "Users/" + uId, null);
 
             if (result != "ERROR")
             {
@@ -84,9 +90,56 @@ namespace AdminCorridorSystem.Controllers
             
         }
 
+        public async Task<ActionResult> EditUser(int uId, string firstname, string lastname, string email, string title)
+        {
+            var values = new Dictionary<string, string>();
+            values.Add("Title", title);
+            values.Add("FirstName", firstname);
+            values.Add("LastName", lastname);
+            values.Add("Email", email);
+            var content = new FormUrlEncodedContent(values);
+
+            string result = await SendRequests.RunRequest("PUT", "Users/" + uId, content);
+
+            if (result != "ERROR")
+            {
+                return RedirectToAction("ManageUsers", "Home");
+            }
+            else
+            {
+                return RedirectToAction("ManageUsers", "Home");
+            }
+        }
+
+        public async Task<ActionResult> RegisterUser(string username, string password, string confirmpassword, string usertype, string title, string firstname, string lastname, string email, string signature)
+        {
+            var values = new Dictionary<string, string>();
+            values.Add("Username", username);
+            values.Add("Password", password);
+            values.Add("ConfirmPassword", confirmpassword);
+            values.Add("Usertype", usertype);
+            values.Add("Title", title);
+            values.Add("FirstName", firstname);
+            values.Add("LastName", lastname);
+            values.Add("Email", email);
+            values.Add("signature", signature);
+            var content = new FormUrlEncodedContent(values);
+
+            string result = await SendRequests.RunRequest("POST", "Account/Register", content);
+
+            if (result != "ERROR")
+            {
+                return RedirectToAction("ManageUsers", "Home");
+            }
+            else
+            {
+                return RedirectToAction("ManageUsers", "Home");
+            }
+        }
+
         public async Task<ActionResult> GetUsers(int type)
         {
-            string result = await SendRequests.RunRequest("GET", "Users/"+ type, null);
+            string result = await SendRequests.RunRequest("GET", "User/"+ type, null);
 
             if (result != "ERROR")
             {
@@ -98,8 +151,11 @@ namespace AdminCorridorSystem.Controllers
                     var test = (JObject)i;
                     user.FirstName = i.SelectToken("FirstName").Value<string>(); 
                     user.UserName = i.SelectToken("UserName").Value<string>();
-                    user.LastName = i.SelectToken("FirstName").Value<string>();
+                    user.LastName = i.SelectToken("LastName").Value<string>();
+                    user.Email = i.SelectToken("Email").Value<string>();
+                    user.Title = i.SelectToken("Title").Value<string>();
                     user.uId = i.SelectToken("Id").Value<int>();
+                    user.Signature = i.SelectToken("signature").Value<string>();
                     ManagedUsers.ManageUser.Add(user);
                 }
                 
