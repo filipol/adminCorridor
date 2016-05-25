@@ -20,7 +20,21 @@ textarea {
     max-width: 280px;
 }
 
-.side-nav a {
-    color: #fff !important;
+.icon-white {
+    color: white !important;
 }
 
+.icon-blue {
+    color: #64B5F6 !important;
+}
+
+.fixed-action-btn {
+    position: relative !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    padding-top: 0 !important;
+}
+
+.fixed-action-btn.horizontal ul li {
+    margin: 0 !important;
+}

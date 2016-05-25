@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="~/Content/Basic.css">
 </head>
 <body>
-        <div class="wrapper">
+        
 
             <!-- Modal Structure -->
             <div id="modal-delete" class="modal">
@@ -52,14 +52,14 @@
                     </div>
                     <div class="row">
                         <div class="input-field col s6">
-                            <input value=" " id="first_name" type="text" class="validate">
-                            <label class="active" for="first_name">First Name</label>
+                            <input value=" " id="firstname" type="text" class="validate">
+                            <label class="active" for="firstname">First Name</label>
                         </div>
                     </div>
                     <div class="row">
                         <div class="input-field col s6">
-                            <input value=" " id="last_name" type="text" class="validate">
-                            <label class="active" for="last_name">Last Name</label>
+                            <input value=" " id="lastname" type="text" class="validate">
+                            <label class="active" for="lastname">Last Name</label>
                         </div>
                     </div>
                     <div class="row">
@@ -75,25 +75,81 @@
                 </div>
             </div>
 
-            
-
-            <nav>
-                <div class="nav-wrapper">
-                    <ul id="nav-mobile" class="left hide-on-med-and-down">
-                        <li><a class="waves-effect waves-light btn" onclick="location.href='@Url.Action("GetUsers", "Home", new RouteValueDictionary(new { type = 1 }))'">Admins</a></li>
-                        <li><a class="waves-effect waves-light btn" onclick="location.href='@Url.Action("GetUsers", "Home", new RouteValueDictionary(new { type = 2 }))'">Teachers</a></li>
-                        <li><a class="waves-effect waves-light btn" onclick="location.href='@Url.Action("GetUsers", "Home", new RouteValueDictionary(new { type = 3 }))'">Students</a></li>
-                    </ul>
+            <div id="modal-register" class="modal">
+                <div class="modal-content">
+                    <h4>Register User</h4>
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <input value="" id="title" type="text" class="validate">
+                            <label class="active" for="title">Title</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <input value="" id="usertype" type="text" class="validate">
+                            <label class="active" for="usertype">Usertype</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <input value="" id="firstname" type="text" class="validate">
+                            <label class="active" for="firstname">First Name</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <input value="" id="username" type="text" class="validate">
+                            <label class="active" for="username">Username</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <input value="" id="lastname" type="text" class="validate">
+                            <label class="active" for="lastname">Last Name</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <input value="" id="password" type="password" class="validate">
+                            <label class="active" for="password">Password</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <input value="" id="email" type="text" class="validate">
+                            <label class="active" for="email">Email</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <input value="" id="confirmpassword" type="password" class="validate">
+                            <label class="active" for="confirmpassword">Confirm password</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <input value="" id="signature" type="text" class="validate">
+                            <label class="active" for="signature">Signature</label>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat" onclick="registerUser()">Confirm</a>
+                        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Cancel</a>
+                    </div>
                 </div>
-            </nav>
+            </div>
 
             <table class="striped responsive-table highlight">
                 <thead>
                     <tr>
-                        <th data-field="id">Username</th>
-                        <th data-field="name">Firstname</th>
-                        <th data-field="price">Lastname</th>
-                        <th data-field="acttion" style="text-align:right">action</th>
+                        <th>Username</th>
+                        <th>Firstname</th>
+                        <th>Lastname</th>
+                        <th>Title</th>
+                        <th>Email</th>
+                        <th style="text-align:right">
+                            <a data-target="modal-register" class="modal-trigger modal-register btn-floating blue lighten-2"><i class="small material-icons">person_add</i></a>
+                            <a class='dropdown-button btn-floating red' href='#' data-activates='dropdown1'><i class="material-icons">list</i></a>
+
+                            <!-- Dropdown Structure -->
+                            <ul id='dropdown1' class='dropdown-content'>
+                                <li><a onclick="location.href='@Url.Action("GetUsers", "Home", new RouteValueDictionary(new { type = 1 }))'">Admins</a></li>
+                                <li><a onclick="location.href='@Url.Action("GetUsers", "Home", new RouteValueDictionary(new { type = 2 }))'">Teachers</a></li>
+                                <li><a onclick="location.href='@Url.Action("GetUsers", "Home", new RouteValueDictionary(new { type = 3 }))'">Students</a></li>
+                            </ul>
+                        </th>
                     </tr>
                 </thead>
 
@@ -109,17 +165,21 @@
                                 <td>@i.Title</td>
                                 <td>@i.Email</td>
                                 <td style="text-align:right">
-                                    <button data-target="modal-delete" data-id="@i.uId" class="modal-delete waves-effect waves-light btn modal-trigger" style="background-color:#ff0000"><i class="material-icons left">delete_forever</i>Delete</button>
-                                    <button data-target="modal-edit" data-id="@i.uId" data-username="@i.UserName" data-firstname="@i.FirstName" data-lastname="@i.LastName" data-email="@i.Email" data-title="@i.Title" class="modal-edit waves-effect waves-light btn modal-trigger"><i class="material-icons left">mode_edit</i>Edit</button>
+                                    <div class="fixed-action-btn horizontal">
+                                        <a data-target="modal-edit" data-id="@i.uId" data-username="@i.UserName" data-firstname="@i.FirstName" data-lastname="@i.LastName" data-email="@i.Email" data-title="@i.Title" class="modal-edit modal-trigger btn-floating yellow darken-2">
+                                            <i class="material-icons">mode_edit</i>
+                                        </a>
+                                        <ul>
+                                            <li><a data-target="modal-delete" data-id="@i.uId" class="modal-delete modal-trigger btn-floating red"><i class="material-icons">delete</i></a></li>
+                                        </ul>
+                                    </div>
                                 </td>
                             </tr>
                         }
                     }                    
-
-
                 </tbody>
             </table>
-        </div>
+       
 
 
 
@@ -133,6 +193,7 @@
             var usertype = 0;
             var password = "";
             var confirmpassword = "";
+            var signature = "";
             //var errorMessage = ViewData["errorMessage"];
 
             //$(document).on("click", ".modal-error", function () {
@@ -150,14 +211,11 @@
                 lastname = $(this).data("lastname");
                 email = $(this).data("email");
                 title = $(this).data("title");
-                $("#first_name").val(firstname);
-                $("#last_name").val(lastname);
-                $("#username").val(username);
-                $("#email").val(email);
-                $("#title").val(title);
-            });
-
-            $(document).on("click", ".modal-register", function () {
+                $("#modal-edit").find("#first_name").val(firstname);
+                $("#modal-edit").find("#last_name").val(lastname);
+                $("#modal-edit").find("#username").val(username);
+                $("#modal-edit").find("#email").val(email);
+                $("#modal-edit").find("#title").val(title);
             });
 
             function deleteTheUser()
@@ -166,23 +224,24 @@
             }
 
             function editTheUser() {
-                firstname = $("#first_name").val();
-                lastname = $("#last_name").val();
-                title = $("#title").val();
-                email = $("#email").val();
+                firstname = $("#modal-edit").find("#firstname").val();
+                lastname = $("#modal-edit").find("#lastname").val();
+                title = $("#modal-edit").find("#title").val();
+                email = $("#modal-edit").find("#email").val();
                 location.href = '@Url.Action("EditUser", "Home")?uId=' + uId + '&firstname=' + firstname + '&lastname=' + lastname + '&email=' + email + '&title=' + title;
             }
 
             function registerUser() {
-                username = $("#username").val();
-                password = $("#password").val();
-                confirmPassword = $("#confirmpassword").val();
-                usertype = Int($("#usertype").val());
-                title = $("#title").val();
-                firstname = $("#first_name").val();
-                lastname = $("#last_name").val();
-                email = $("#email").val();
-                location.href = '@Url.Action("RegisterUser", "Home")?username=' + username + '&password=' + password + '&confirmpassword=' + confirmpassword + '&usertype=' + usertype + '&title=' + title + '&firstname=' + firstname + '&lastname=' + lastname + '&email=' + email;
+                username = $("#modal-register").find("#username").val();
+                password = $("#modal-register").find("#password").val();
+                confirmpassword = $("#modal-register").find("#confirmpassword").val();
+                usertype = $("#modal-register").find("#usertype").val();
+                title = $("#modal-register").find("#title").val();
+                firstname = $("#modal-register").find("#firstname").val();
+                lastname = $("#modal-register").find("#lastname").val();
+                email = $("#modal-register").find("#email").val();
+                signature = $("#modal-register").find("#signature").val();
+                location.href = '@Url.Action("RegisterUser", "Home")?username=' + username + '&password=' + password + '&confirmpassword=' + confirmpassword + '&usertype=' + usertype + '&title=' + title + '&firstname=' + firstname + '&lastname=' + lastname + '&email=' + email + '&signature=' + signature;
             }
 
             $(document).ready(function () {

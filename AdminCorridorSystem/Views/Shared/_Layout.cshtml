@@ -13,7 +13,7 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src='../lib/fullcalendar.min.js'></script>
 
-    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/Site.css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
@@ -21,68 +21,16 @@
     <nav class="blue lighten-2">
         <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
         <ul class="left side-nav blue lighten-2 center" id="slide-out">
-            <li><a href="/Home/Index"><i class="small material-icons">home</i></a></li>
-            <li><a href="/Home/Schedule"><i class="small material-icons">schedule</i></a></li>
-            <li><a href="/Home/ManageUsers"><i class="small material-icons">group</i></a></li>
-            <li><a data-target="modal-register" class="modal-trigger modal-register"><i class="small material-icons">person_add</i></a></li>
+            <li><a href="/Home/Index" class=""><i class="icon-white small material-icons">home</i></a></li>
+            <li><a href="/Home/Schedule"><i class="icon-white small material-icons">schedule</i></a></li>
+            <li><a href="/Home/ManageUsers"><i class="icon-white small material-icons">group</i></a></li>
         </ul>
         <ul class="left hide-on-med-and-down">
-            <li><a href="/Home/Index"><i class="small material-icons">home</i></a></li>
+            <li><a href="/Home/Index"><i class="material-icons">home</i></a></li>
             <li><a href="/Home/Schedule"><i class="small material-icons">schedule</i></a></li>
             <li><a href="/Home/ManageUsers"><i class="small material-icons">group</i></a></li>
-            <li><a data-target="modal-register" class="modal-trigger modal-register"><i class="small material-icons">person_add</i></a></li>
         </ul>
     </nav>
-
-    <div id="modal-register" class="modal">
-        <div class="modal-content">
-            <h4>Register User</h4>
-            <div class="row">
-                <div class="input-field col s6">
-                    <input value="" id="title" type="text" class="validate">
-                    <label class="active" for="title">Title</label>
-                </div>
-                <div class="input-field col s6">
-                    <input value="" id="usertype" type="text" class="validate">
-                    <label class="active" for="usertype">Usertype</label>
-                </div>
-            </div>
-            <div class="row">
-                <div class="input-field col s6">
-                    <input value="" id="first_name" type="text" class="validate">
-                    <label class="active" for="first_name">First Name</label>
-                </div>
-                <div class="input-field col s6">
-                    <input value="" id="username" type="text" class="validate">
-                    <label class="active" for="username">Username</label>
-                </div>
-            </div>
-            <div class="row">
-                <div class="input-field col s6">
-                    <input value="" id="last_name" type="text" class="validate">
-                    <label class="active" for="last_name">Last Name</label>
-                </div>
-                <div class="input-field col s6">
-                    <input value="" id="password" type="password" class="validate">
-                    <label class="active" for="password">Password</label>
-                </div>
-            </div>
-            <div class="row">
-                <div class="input-field col s6">
-                    <input value="" id="email" type="text" class="validate">
-                    <label class="active" for="email">Email</label>
-                </div>
-                <div class="input-field col s6">
-                    <input value="" id="confirmpassword" type="password" class="validate">
-                    <label class="active" for="confirmpassword">Confirm password</label>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat" onclick="editTheUser()">Confirm</a>
-                <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Cancel</a>
-            </div>
-        </div>
-    </div>
 
     <div>
         @RenderBody()
@@ -107,22 +55,6 @@
         $('body').on('click', '.button-collapse', function () {
             window.alert('too bad :(. This event will never be triggered because the sideNav is stopping propagation.');
         });
-
-        $(document).ready(function () {
-            $('.modal-trigger').leanModal();
-        });
-
-        function registerUser() {
-            username = $("#username").val();
-            password = $("#password").val();
-            confirmPassword = $("#confirmpassword").val();
-            usertype = Int($("#usertype").val());
-            title = $("#title").val();
-            firstname = $("#first_name").val();
-            lastname = $("#last_name").val();
-            email = $("#email").val();
-            location.href = '@Url.Action("RegisterUser", "Home")?username=' + username + '&password=' + password + '&confirmpassword=' + confirmpassword + '&usertype=' + usertype + '&title=' + title + '&firstname=' + firstname + '&lastname=' + lastname + '&email=' + email;
-        }
     </script>
 
     @*@Scripts.Render("~/bundles/jquery")*@

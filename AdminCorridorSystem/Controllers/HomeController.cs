@@ -107,14 +107,39 @@ namespace AdminCorridorSystem.Controllers
             }
             else
             {
-                ViewData["errorMessage"] = "An error occurred when editing the user.";
-                return View("ManageUsers", ViewData["errorMessage"]);
+                return RedirectToAction("ManageUsers", "Home");
+            }
+        }
+
+        public async Task<ActionResult> RegisterUser(string username, string password, string confirmpassword, string usertype, string title, string firstname, string lastname, string email, string signature)
+        {
+            var values = new Dictionary<string, string>();
+            values.Add("Username", username);
+            values.Add("Password", password);
+            values.Add("ConfirmPassword", confirmpassword);
+            values.Add("Usertype", usertype);
+            values.Add("Title", title);
+            values.Add("FirstName", firstname);
+            values.Add("LastName", lastname);
+            values.Add("Email", email);
+            values.Add("signature", signature);
+            var content = new FormUrlEncodedContent(values);
+
+            string result = await SendRequests.RunRequest("POST", "Account/Register", content);
+
+            if (result != "ERROR")
+            {
+                return RedirectToAction("ManageUsers", "Home");
+            }
+            else
+            {
+                return RedirectToAction("ManageUsers", "Home");
             }
         }
 
         public async Task<ActionResult> GetUsers(int type)
         {
-            string result = await SendRequests.RunRequest("GET", "Users/"+ type, null);
+            string result = await SendRequests.RunRequest("GET", "User/"+ type, null);
 
             if (result != "ERROR")
             {
@@ -130,6 +155,7 @@ namespace AdminCorridorSystem.Controllers
                     user.Email = i.SelectToken("Email").Value<string>();
                     user.Title = i.SelectToken("Title").Value<string>();
                     user.uId = i.SelectToken("Id").Value<int>();
+                    user.Signature = i.SelectToken("signature").Value<string>();
                     ManagedUsers.ManageUser.Add(user);
                 }
                 
