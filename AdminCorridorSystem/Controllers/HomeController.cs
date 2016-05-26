@@ -84,26 +84,24 @@ namespace AdminCorridorSystem.Controllers
             {
                 JObject eventsObject = (JObject)JsonConvert.DeserializeObject(result);
                 JArray test = eventsObject.SelectToken("events").Value<JArray>();
-                ScheduleViewModal sch = new ScheduleViewModal();
+                ScheduleViewModal schedule = new ScheduleViewModal();
                 foreach (var i in test)
                 {
                     Events ev = new Events();
 
-                    ev.DTEnd = i.SelectToken("DTEnd").Value<DateTime>();
-                    ev.DTStamp = i.SelectToken("DTStamp").Value<DateTime>();
-                    ev.DTStart = i.SelectToken("DTStart").Value<DateTime>();
-                    ev.Duration = TimeSpan.Parse(i.SelectToken("Duration").Value<string>());
-                    
+                    ev.DTEnd = (i.SelectToken("DTEnd").Value<DateTime>()).ToString("yyyy'-'MM'-'dd'T'HH':'mm':'ss");
+                    ev.DTStamp = i.SelectToken("DTStamp").Value<DateTime>();  
+                    ev.DTStart = (i.SelectToken("DTStart").Value<DateTime>()).ToString("yyyy'-'MM'-'dd'T'HH':'mm':'ss");
+                    ev.Duration = TimeSpan.Parse(i.SelectToken("Duration").Value<string>());           
                     ev.externalId = i.SelectToken("externalId").Value<string>();
                     ev.Id = i.SelectToken("Id").Value<int>();
                     ev.LastModified = i.SelectToken("LastModified").Value<DateTime>();
                     ev.Location = i.SelectToken("Location").Value<string>();
                     ev.Summary = i.SelectToken("Summary").Value<string>();
-                    sch.Schedule.Add(ev);
+                    schedule.Schedule.Add(ev);
                 }
 
-
-                return View("Schedule", sch);
+                return View("Schedule", schedule);
             }
             else
             {

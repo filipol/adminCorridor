@@ -8,8 +8,8 @@ namespace AdminCorridorSystem.Models
     public class Events
     {
         public int Id { get; set; }
-        public DateTime DTEnd { get; set; }
-        public DateTime DTStart { get; set; }
+        public string DTEnd { get; set; }
+        public string DTStart { get; set; }
         public TimeSpan Duration { get; set; }
         public DateTime DTStamp { get; set; }
         public DateTime LastModified { get; set; }

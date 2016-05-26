@@ -1,54 +1,14 @@
 ﻿@model AdminCorridorSystem.Models.ScheduleViewModal
 
-<!DOCTYPE html>
+@{
+    ViewBag.Title = "Schedule";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
 <html>
 <head>
+    <title>Schedule</title>
     
-    <script>
-        
-        var dt = new Date();
-        $(document).ready(function() {
-		
-            $('#calendar').fullCalendar({
-                header: {
-                    left: 'prev,next today',
-                    center: 'title',
-                    right: 'month,agendaWeek,agendaDay'
-                },
-                defaultDate: dt.getFullYear() + '-' + (dt.getMonth() + 1) + '-' + dt.getDate(),
-                selectable: true,
-                selectHelper: true,
-                select: function(start, end) {
-                    var title = prompt('Event Title:');
-                    var eventData;
-                    if (title) {
-                        eventData = {
-                            title: title,
-                            start: start,
-                            end: end
-                        };
-                        $('#calendar').fullCalendar('renderEvent', eventData, true); // stick? = true
-                    }
-                    $('#calendar').fullCalendar('unselect');
-                },
-                editable: true,
-                eventLimit: true, // allow "more" link when too many events
-                events: [
-                    @foreach (var i in Model.Schedule)
-                    {
-                        
-                    }
-                    {
-                        title: 'All Day Event',
-                        start: '2016-05-01'
-                    }
-                    
-                ]
-            });
-		
-        });
-
-    </script>
     <style>
         body {
             margin: 40px 10px;
@@ -64,10 +24,73 @@
     </style>
 </head>
 <body>
+    <script type="text/javascript">
+
+    var dt = new Date();
+    var students = @Html.Raw(Json.Encode(Model.Schedule));
+
+        $(document).ready(function () {
+
+
+            for (var i = 0; i < students.length; i++) {
+                var student = students[i];
+                var newEvent = {
+                    start: student.DTStart,
+                    end: student.DTEnd,
+                    allDay: false,
+                    title: student.Summary
+                };
+                alert(newEvent.start);
+                $('#calendar').fullCalendar('renderEvent', newEvent);
+            }
+
+            $('#calendar').fullCalendar({
+                header: {
+                    left: 'prev,next today',
+                    center: 'title',
+                    right: 'month,agendaWeek,agendaDay'
+                },
+                defaultDate: dt.getFullYear() + '-' + (dt.getMonth() + 1) + '-' + dt.getDate(),
+                selectable: true,
+                selectHelper: true,
+                select: function (start, end) {
+                    var title = prompt('Event Title:');
+                    var eventData;
+                    if (title) {
+                        eventData = {
+                            title: title,
+                            start: start,
+                            end: end
+                        };
+                        
+                    }
+                    $('#calendar').fullCalendar('unselect');
+                },
+                editable: true,
+                eventLimit: true, // allow "more" link when too many events
+                @*events: [
+                @foreach (var i in Model.Schedule)
+                {
+
+            }
+            {
+            title: 'All Day Event',
+            start: '2016-05-01'
+        }
+
+        ]*@
+        });
+
+    });
+
+
+
+    </script>
+    
     <div class="wrapper contentPadding">
         <div id='calendar'></div>
     </div>
-        
+
 
 </body>
 </html>
