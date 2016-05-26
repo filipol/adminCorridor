@@ -16,10 +16,10 @@
     <title>Index</title>
 </head>
 <body style="background-color:rgba(24, 169, 231, 0.71)">
-    <div class="container body-content">
-            <div style="text-align:center;">
-                <img class="LoginImageSize" src="~/Images/LogaLoginV4.png" />
-            </div>    
+    <div class="container body-content ReSizeContainerOnBigSize">
+        <div style="text-align:center;">
+            <img class="LoginImageSize" src="~/Images/LogaLoginV4.png" />
+        </div>
         <div class="col s1">
             <form action="@Url.Action("GetToken" , "Login", null)" method="post">
                 <div class="card-panel z-depth-5" style="border-radius:10px !important; height:400px;">
@@ -39,14 +39,12 @@
                     </div>
                     <div style="text-align:center; padding-top:20px;">
                         <div class="row">
-                            <input type="submit" value="Sign in" class="waves-effect waves-light btn topNav" style="width:160px;">
+                            <input type="submit" value="Sign in" class="waves-effect waves-light btn" style="width: 160px; background-color: rgba(24, 169, 231, 0.71)">
                         </div>
                     </div>
                 </div>
             </form>
         </div>
-
-
     </div>
 </body>
 </html>

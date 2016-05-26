@@ -131,48 +131,55 @@
                 </div>
             </div>
 
-            <table class="bordered responsive-table">
-                <thead>
-                    <tr>
-                        <th>Username</th>
-                        <th>Firstname</th>
-                        <th>Lastname</th>
-                        <th>Title</th>
-                        <th>Email</th>
-                        <th style="text-align:right">
-                            <a data-target="modal-register" class="modal-trigger modal-register btn-floating green"><i class="small material-icons">person_add</i></a>
-                            <a class='dropdown-button btn-floating blue lighten-2' href='#' data-activates='dropdown1'><i class="material-icons">list</i></a>
+    <div class="container">
+        <table class="bordered responsive-table">
+            <thead>
+                <tr>
+                    <th>Username</th>
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                    <th>Title</th>
+                    <th>Email</th>
+                    <th style="text-align:right">
+                        <a data-target="modal-register" class="modal-trigger modal-register btn-floating green"><i class="small material-icons">person_add</i></a>
+                        <a class='dropdown-button btn-floating blue lighten-2' href='#' data-activates='dropdown1'><i class="material-icons">list</i></a>
 
-                            <!-- Dropdown Structure -->
-                            <ul id='dropdown1' class='dropdown-content'>
-                                <li><a onclick="location.href='@Url.Action("GetUsers", "Home", new RouteValueDictionary(new { type = 1 }))'">Admins</a></li>
-                                <li><a onclick="location.href='@Url.Action("GetUsers", "Home", new RouteValueDictionary(new { type = 2 }))'">Teachers</a></li>
-                                <li><a onclick="location.href='@Url.Action("GetUsers", "Home", new RouteValueDictionary(new { type = 3 }))'">Students</a></li>
-                            </ul>
-                        </th>
-                    </tr>
-                </thead>
+                        <!-- Dropdown Structure -->
+                        <ul id='dropdown1' class='dropdown-content'>
+                            <li><a onclick="location.href='@Url.Action("GetUsers", "Home", new RouteValueDictionary(new { type = 1 }))'">Admins</a></li>
+                            <li><a onclick="location.href='@Url.Action("GetUsers", "Home", new RouteValueDictionary(new { type = 2 }))'">Teachers</a></li>
+                            <li><a onclick="location.href='@Url.Action("GetUsers", "Home", new RouteValueDictionary(new { type = 3 }))'">Students</a></li>
+                        </ul>
+                    </th>
+                </tr>
+            </thead>
 
-                <tbody>
-                    @if (Model.ManageUser != null)
+            <tbody>
+                @if (Model.ManageUser != null)
+                {
+                    foreach (var i in Model.ManageUser)
                     {
-                        foreach (var i in Model.ManageUser)
-                        {
-                            <tr>
-                                <td>@i.UserName</td>
-                                <td>@i.FirstName</td>
-                                <td>@i.LastName</td>
-                                <td>@i.Title</td>
-                                <td>@i.Email</td>
-                                <td style="text-align:right">
-                                    <a data-target="modal-edit" data-id="@i.uId" data-username="@i.UserName" data-firstname="@i.FirstName" data-lastname="@i.LastName" data-email="@i.Email" data-title="@i.Title" class="modal-edit modal-trigger btn-floating yellow darken-2"><i class="material-icons">mode_edit</i></a>
-                                    <a data-target="modal-delete" data-id="@i.uId" class="modal-delete modal-trigger btn-floating red"><i class="material-icons">delete</i></a>
-                                </td>
-                            </tr>
-                        }
-                    }                    
-                </tbody>
-            </table>
+                        <tr>
+                            <td>@i.UserName</td>
+                            <td>@i.FirstName</td>
+                            <td>@i.LastName</td>
+                            <td>@i.Title</td>
+                            <td>@i.Email</td>                            
+                            <td style="text-align:right">
+                                <a data-target="modal-edit" data-id="@i.uId" data-username="@i.UserName" data-firstname="@i.FirstName" data-lastname="@i.LastName" data-email="@i.Email" data-title="@i.Title" class="modal-edit modal-trigger btn-floating yellow darken-2"><i class="material-icons">mode_edit</i></a>
+                                <a data-target="modal-delete" data-id="@i.uId" class="modal-delete modal-trigger btn-floating red"><i class="material-icons">delete</i></a>
+                            </td>
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+
+
+
+
+
        
 
 

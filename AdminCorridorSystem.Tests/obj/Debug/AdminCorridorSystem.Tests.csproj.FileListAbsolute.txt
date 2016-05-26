@@ -191,3 +191,41 @@ C:\Users\Viktor\Documents\Visual Studio 2015\Projects\adminCorridor\AdminCorrido
 C:\Users\Viktor\Documents\Visual Studio 2015\Projects\adminCorridor\AdminCorridorSystem.Tests\obj\Debug\AdminCorridorSystem.Tests.csprojResolveAssemblyReference.cache
 C:\Users\Viktor\Documents\Visual Studio 2015\Projects\adminCorridor\AdminCorridorSystem.Tests\obj\Debug\AdminCorridorSystem.Tests.dll
 C:\Users\Viktor\Documents\Visual Studio 2015\Projects\adminCorridor\AdminCorridorSystem.Tests\obj\Debug\AdminCorridorSystem.Tests.pdb
+C:\Users\olfi1314\Documents\GitHub\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\ApplicationInsights.config
+C:\Users\olfi1314\Documents\GitHub\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\roslyn\csc.exe
+C:\Users\olfi1314\Documents\GitHub\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\olfi1314\Documents\GitHub\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\olfi1314\Documents\GitHub\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\olfi1314\Documents\GitHub\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\olfi1314\Documents\GitHub\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\olfi1314\Documents\GitHub\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\olfi1314\Documents\GitHub\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\roslyn\System.Collections.Immutable.dll
+C:\Users\olfi1314\Documents\GitHub\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\roslyn\System.Reflection.Metadata.dll
+C:\Users\olfi1314\Documents\GitHub\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\roslyn\vbc.exe
+C:\Users\olfi1314\Documents\GitHub\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\roslyn\VBCSCompiler.exe
+C:\Users\olfi1314\Documents\GitHub\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\roslyn\VBCSCompiler.exe.config
+C:\Users\olfi1314\Documents\GitHub\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\AdminCorridorSystem.Tests.dll.config
+C:\Users\olfi1314\Documents\GitHub\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\AdminCorridorSystem.Tests.dll
+C:\Users\olfi1314\Documents\GitHub\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\AdminCorridorSystem.Tests.pdb
+C:\Users\olfi1314\Documents\GitHub\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\AdminCorridorSystem.dll
+C:\Users\olfi1314\Documents\GitHub\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\olfi1314\Documents\GitHub\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\Newtonsoft.Json.dll
+C:\Users\olfi1314\Documents\GitHub\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\System.Web.Helpers.dll
+C:\Users\olfi1314\Documents\GitHub\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\System.Web.Mvc.dll
+C:\Users\olfi1314\Documents\GitHub\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\System.Web.Razor.dll
+C:\Users\olfi1314\Documents\GitHub\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Users\olfi1314\Documents\GitHub\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\System.Web.WebPages.dll
+C:\Users\olfi1314\Documents\GitHub\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Users\olfi1314\Documents\GitHub\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\System.Web.Optimization.dll
+C:\Users\olfi1314\Documents\GitHub\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\AdminCorridorSystem.pdb
+C:\Users\olfi1314\Documents\GitHub\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\Newtonsoft.Json.xml
+C:\Users\olfi1314\Documents\GitHub\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\System.Web.Helpers.xml
+C:\Users\olfi1314\Documents\GitHub\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\System.Web.Mvc.xml
+C:\Users\olfi1314\Documents\GitHub\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\System.Web.Razor.xml
+C:\Users\olfi1314\Documents\GitHub\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\System.Web.WebPages.xml
+C:\Users\olfi1314\Documents\GitHub\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\Users\olfi1314\Documents\GitHub\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\System.Web.WebPages.Razor.xml
+C:\Users\olfi1314\Documents\GitHub\adminCorridor\AdminCorridorSystem.Tests\bin\Debug\System.Web.Optimization.xml
+C:\Users\olfi1314\Documents\GitHub\adminCorridor\AdminCorridorSystem.Tests\obj\Debug\AdminCorridorSystem.Tests.csprojResolveAssemblyReference.cache
+C:\Users\olfi1314\Documents\GitHub\adminCorridor\AdminCorridorSystem.Tests\obj\Debug\AdminCorridorSystem.Tests.dll
+C:\Users\olfi1314\Documents\GitHub\adminCorridor\AdminCorridorSystem.Tests\obj\Debug\AdminCorridorSystem.Tests.pdb

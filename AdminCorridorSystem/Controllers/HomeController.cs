@@ -38,8 +38,9 @@ namespace AdminCorridorSystem.Controllers
             }
         }
 
-        public ActionResult Index()
+        public async Task<ActionResult> Index()
         {
+            await GetUsers(1);
             return View();
         }
         public ActionResult AddUser()
@@ -139,7 +140,7 @@ namespace AdminCorridorSystem.Controllers
 
         public async Task<ActionResult> GetUsers(int type)
         {
-            string result = await SendRequests.RunRequest("GET", "User/"+ type, null);
+            string result = await SendRequests.RunRequest("GET", "Users/"+ type, null);
 
             if (result != "ERROR")
             {
@@ -156,6 +157,7 @@ namespace AdminCorridorSystem.Controllers
                     user.Title = i.SelectToken("Title").Value<string>();
                     user.uId = i.SelectToken("Id").Value<int>();
                     user.Signature = i.SelectToken("signature").Value<string>();
+                    user.Status = i.SelectToken("status").Value<string>();
                     ManagedUsers.ManageUser.Add(user);
                 }
                 
