@@ -30,8 +30,23 @@
     var students = @Html.Raw(Json.Encode(Model.Schedule));
 
         $(document).ready(function () {
+            
 
+            $('#calendar').fullCalendar({
+                header: {
+                    left: 'prev,next today',
+                    center: 'title',
+                    right: 'agendaWeek,agendaDay'
+                },
+                viewRender: function(view, element) {                                       
+                    $('#calendar').fullCalendar('refetchEvents');
+                },
+                defaultDate: dt.getFullYear() + '-' + (dt.getMonth() + 1) + '-' + dt.getDate(),
+                
+                
 
+        
+            });
             for (var i = 0; i < students.length; i++) {
                 var student = students[i];
                 var newEvent = {
@@ -40,56 +55,63 @@
                     allDay: false,
                     title: student.Summary
                 };
-                alert(newEvent.start);
-                $('#calendar').fullCalendar('renderEvent', newEvent);
+                $('#calendar').fullCalendar('renderEvent', newEvent, true);
+                
             }
+            jQuery.noConflict();
+            $('.modal-trigger').leanModal();
+    });
+        
 
-            $('#calendar').fullCalendar({
-                header: {
-                    left: 'prev,next today',
-                    center: 'title',
-                    right: 'month,agendaWeek,agendaDay'
-                },
-                defaultDate: dt.getFullYear() + '-' + (dt.getMonth() + 1) + '-' + dt.getDate(),
-                selectable: true,
-                selectHelper: true,
-                select: function (start, end) {
-                    var title = prompt('Event Title:');
-                    var eventData;
-                    if (title) {
-                        eventData = {
-                            title: title,
-                            start: start,
-                            end: end
-                        };
-                        
-                    }
-                    $('#calendar').fullCalendar('unselect');
-                },
-                editable: true,
-                eventLimit: true, // allow "more" link when too many events
-                @*events: [
-                @foreach (var i in Model.Schedule)
-                {
-
-            }
-            {
-            title: 'All Day Event',
-            start: '2016-05-01'
+        function createEvent() {
+            title = $("#Title").val();
+            status = $("#Status").val();
+            start = $("#Start").val();
+            end = $("#End").val();
+            location.href = '@Url.Action("CreateEvent", "Home")?start=' + start + '&end=' + end + '&status=' + status + '&title=' + title;
         }
 
-        ]*@
-        });
-
-    });
-
-
-
     </script>
+    <div id="modal-create" class="modal">
+        <div class="modal-content">
+            <h4>Create new event</h4>
+            <div class="row">
+                <div class="input-field col s6">
+                    <input value=" " id="Status" type="text" class="validate">
+                    <label class="active" for="title">Title</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s6">
+                    <input value=" " id="Title" type="text" class="validate">
+                    <label class="active" for="first_name">First Name</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s6">
+                    <input value=" " id="End" type="text" class="validate">
+                    <label class="active" for="last_name">Last Name</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s6">
+                    <input value=" " id="Start" type="text" class="validate">
+                    <label class="active" for="email">Email</label>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat" onclick="createEvent()">Save</a>
+                <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Cancel</a>
+            </div>
+        </div>
+    </div>
+
+
     
     <div class="wrapper contentPadding">
         <div id='calendar'></div>
     </div>
+    <a class="btn-floating btn-large waves-effect waves-light red bottom-right modal-trigger modal-create" data-target="modal-create"><i class="material-icons">add</i></a>
 
 
 </body>
