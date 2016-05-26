@@ -82,16 +82,18 @@ namespace AdminCorridorSystem.Controllers
 
             if (result != "ERROR")
             {
-                var events = (JArray)JsonConvert.DeserializeObject(result);
+                JObject eventsObject = (JObject)JsonConvert.DeserializeObject(result);
+                JArray test = eventsObject.SelectToken("events").Value<JArray>();
                 ScheduleViewModal sch = new ScheduleViewModal();
-                foreach (var i in events)
+                foreach (var i in test)
                 {
                     Events ev = new Events();
 
                     ev.DTEnd = i.SelectToken("DTEnd").Value<DateTime>();
                     ev.DTStamp = i.SelectToken("DTStamp").Value<DateTime>();
                     ev.DTStart = i.SelectToken("DTStart").Value<DateTime>();
-                    ev.Duration = i.SelectToken("Duration").Value<TimeSpan>();
+                    ev.Duration = TimeSpan.Parse(i.SelectToken("Duration").Value<string>());
+                    
                     ev.externalId = i.SelectToken("externalId").Value<string>();
                     ev.Id = i.SelectToken("Id").Value<int>();
                     ev.LastModified = i.SelectToken("LastModified").Value<DateTime>();

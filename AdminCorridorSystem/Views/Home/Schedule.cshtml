@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@model AdminCorridorSystem.Models.ScheduleViewModal
+
+<!DOCTYPE html>
 <html>
 <head>
     
@@ -32,7 +34,10 @@
                 editable: true,
                 eventLimit: true, // allow "more" link when too many events
                 events: [
-                    
+                    @foreach (var i in Model.Schedule)
+                    {
+                        
+                    }
                     {
                         title: 'All Day Event',
                         start: '2016-05-01'
