@@ -21,22 +21,22 @@
     <nav class="blue lighten-2">
         <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
         <ul class="left side-nav blue lighten-2 center" id="slide-out">
-            <li><a href="/Home/Index" class=""><i class="icon-white small material-icons">home</i></a></li>
+            <li><a href="/Home/Index"><i class="icon-white small material-icons">home</i></a></li>
             <li><a href="/Home/Schedule"><i class="icon-white small material-icons">schedule</i></a></li>
             <li><a href="/Home/ManageUsers"><i class="icon-white small material-icons">group</i></a></li>
         </ul>
         <ul class="left hide-on-med-and-down">
-            <li><a href="/Home/Index"><i class="material-icons">home</i></a></li>
-            <li><a href="/Home/Schedule"><i class="small material-icons">schedule</i></a></li>
-            <li><a href="/Home/ManageUsers"><i class="small material-icons">group</i></a></li>
+            <li><a href="/Home/Index" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Home"><i class="material-icons">home</i></a></li>
+            <li><a href="/Home/Schedule" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Schedule"><i class="small material-icons">schedule</i></a></li>
+            <li><a href="/Home/ManageUsers" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Manage users"><i class="small material-icons">group</i></a></li>
         </ul>
     </nav>
 
     <div>
         @RenderBody()
-        <footer>
+        @*<footer>
             <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
+        </footer>*@
     </div>
 
 
