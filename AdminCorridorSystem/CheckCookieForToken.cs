@@ -21,20 +21,19 @@ namespace AdminCorridorSystem
         }
 
 
-        public static bool CheckCookie(string something)
+        public static string GetCookie(string cookie)
         {
-            using (var client = new HttpClient())
+
+            if (HttpContext.Current.Request.Cookies[cookie].Value != null)
             {
-                
-                if (HttpContext.Current.Request.Cookies["AccessToken"].Value != null)
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
+                var id = HttpContext.Current.Request.Cookies[cookie].Value;
+                return id;
+            }
+            else
+            {
+                return "No Cookie";
             }
         }
-    }  
+
+    }
 }

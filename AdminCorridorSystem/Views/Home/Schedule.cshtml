@@ -1,22 +1,8 @@
-﻿<!DOCTYPE html>
-<html>
-<head>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
-    <link href='../lib/fullcalendar.css' rel='stylesheet' />
-    <link href='../lib/fullcalendar.print.css' rel='stylesheet' media='print' />
-    <script src='../lib/moment.min.js'></script>
-    <script src='../lib/jquery.min.js'></script>
-    <script src='../lib/fullcalendar.min.js'></script>
-    <link rel="stylesheet" href="~/Content/Basic.css">
-    <script>
+﻿@model AdminCorridorSystem.Models.ScheduleViewModal
 
         $(document).ready(function () {
 
             $('#calendar').fullCalendar({
-                contentHeight: 400,
                 defaultDate: '2016-05-12',
                 editable: true,
                 eventLimit: true, // allow "more" link when too many events
@@ -78,12 +64,13 @@
                 ]
             });
 
-        });
-
-    </script>
+<html>
+<head>
+    <title>Schedule</title>
+    
     <style>
         body {
-            
+            margin: 40px 10px;
             padding: 0;
             font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
             font-size: 14px;
@@ -96,8 +83,95 @@
     </style>
 </head>
 <body>
+    <script type="text/javascript">
 
-    <div id='calendar'></div>
+    var dt = new Date();
+    var students = @Html.Raw(Json.Encode(Model.Schedule));
+
+        $(document).ready(function () {
+            
+
+            $('#calendar').fullCalendar({
+                header: {
+                    left: 'prev,next today',
+                    center: 'title',
+                    right: 'agendaWeek,agendaDay'
+                },
+                viewRender: function(view, element) {                                       
+                    $('#calendar').fullCalendar('refetchEvents');
+                },
+                defaultDate: dt.getFullYear() + '-' + (dt.getMonth() + 1) + '-' + dt.getDate(),
+                
+                
+
+        
+            });
+            for (var i = 0; i < students.length; i++) {
+                var student = students[i];
+                var newEvent = {
+                    start: student.DTStart,
+                    end: student.DTEnd,
+                    allDay: false,
+                    title: student.Summary
+                };
+                $('#calendar').fullCalendar('renderEvent', newEvent, true);
+                
+            }
+            jQuery.noConflict();
+            $('.modal-trigger').leanModal();
+    });
+        
+
+        function createEvent() {
+            title = $("#Title").val();
+            status = $("#Status").val();
+            start = $("#Start").val();
+            end = $("#End").val();
+            location.href = '@Url.Action("CreateEvent", "Home")?start=' + start + '&end=' + end + '&status=' + status + '&title=' + title;
+        }
+
+    </script>
+    <div id="modal-create" class="modal">
+        <div class="modal-content">
+            <h4>Create new event</h4>
+            <div class="row">
+                <div class="input-field col s6">
+                    <input value=" " id="Status" type="text" class="validate">
+                    <label class="active" for="title">Title</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s6">
+                    <input value=" " id="Title" type="text" class="validate">
+                    <label class="active" for="first_name">First Name</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s6">
+                    <input value=" " id="End" type="text" class="validate">
+                    <label class="active" for="last_name">Last Name</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s6">
+                    <input value=" " id="Start" type="text" class="validate">
+                    <label class="active" for="email">Email</label>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat" onclick="createEvent()">Save</a>
+                <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Cancel</a>
+            </div>
+        </div>
+    </div>
+
+
+    
+    <div class="wrapper contentPadding">
+        <div id='calendar'></div>
+    </div>
+    <a class="btn-floating btn-large waves-effect waves-light red bottom-right modal-trigger modal-create" data-target="modal-create"><i class="material-icons">add</i></a>
+
 
 </body>
 </html>
