@@ -1,4 +1,5 @@
-﻿@{
+﻿@model AdminCorridorSystem.Models.ManageUsersViewModal
+@{
     ViewData["Title"] = "Home Page";
 }
 <html>
@@ -7,38 +8,51 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/list.js/1.2.0/list.min.js"></script>
     <link rel="stylesheet" href="~/Content/Basic.css">
 </head>
 
 <body>
-   <div class="container">
-        <div class="row">
-            <div class="col s4 m4 l4">
-                <div class="blue card">
-                    <span class="white-text">
-                        hej :)
-                    </span>
-                </div>
-            </div>
+    <div class="container">
+        <h3>SOMETHING</h3>
 
-            <div class="col s4 m4 l4">
-                <div class="blue card">
-                    <span class="white-text">
-                        hej :)
-                    </span>
+        <div id="users">
+            <nav>
+                <div class="nav-wrapper">
+                    <form>
+                        <div class="input-field blue lighten-2">
+                            <input class="search" type="search" required>
+                            <label for="search"><i id="searchButton" class="material-icons">search</i></label>
+                            <!-- I've put "red-text" class to emphasize -->
+                            <i class="material-icons">close</i>
+                        </div>
+                    </form>
                 </div>
-            </div>
+            </nav>
 
-            <div class="col s4 m4 l4">
-                <div class="blue card">
-                    <span class="white-text">
-                        hej :)
-                    </span>
-                </div>
-            </div>
-        </div
-   </div>
+            <ul class="collection list">
+                @if (Model.ManageUser != null)
+                {
+                    foreach (var i in Model.ManageUser)
+                    {
+                        <li class="collection-item avatar">
+                            <img src="images/yuna.jpg" alt="" class="circle">
+                            <span class="teacherName">@i.FirstName @i.LastName</span>
+                            <p>@i.Email</p>
+                            <p class="secondary-content">Status: @i.Status</p>
+                        </li>
+                    }
+                }
+            </ul>
+        </div>
+    </div>
+    <script>
+        var options = {
+            valueNames: ['teacherName']
+        };
+
+        var listObj = new List('users', options);
+    </script>
 </body>
 
 </html>

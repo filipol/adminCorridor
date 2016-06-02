@@ -20,6 +20,9 @@
     .displaySize{
         display:none !important;
     }
+    .ReSizeContainerOnBigSize{
+        width:50% !important;
+    }
 }
 .form {
     padding:30px !important;
