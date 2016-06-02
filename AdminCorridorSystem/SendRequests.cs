@@ -28,8 +28,47 @@ namespace AdminCorridorSystem
 
             if (typeOfReq == "GET")
             {
+                if(apiEnd == "User")
+                {
+                    using (var client = new HttpClient())
+                    {
+                        try
+                        {
+                            
+                            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", HttpContext.Current.Request.Cookies["AccessToken"].Value);
+                            
+                            var response = await client.GetAsync(baseURL + apiEnd);
+
+                            if (response.StatusCode == HttpStatusCode.OK)
+                            {
+                                var stringResponse = await response.Content.ReadAsStringAsync();
+
+                                var User = (JObject)JsonConvert.DeserializeObject(stringResponse);
+                                var SchId = User.SelectToken("schedule").SelectToken("Id").Value<int>();
+
+                                HttpContext.Current.Response.Cookies.Set(new HttpCookie("ScheduleId")
+                                {
+                                    Value = SchId.ToString(),
+                                    HttpOnly = true,
+
+                                });
+                                return stringResponse;
+
+                            }
+                            else
+                            {
+                                return "ERROR";
+                            }
+                        }
+                        catch (OperationCanceledException)
+                        {
+                            return null;
+                        }
+                    }
+                }
                 using (var client = new HttpClient())
                 {
+                    
                     try
                     {
                         if (HttpContext.Current.Request.Cookies != null && client.DefaultRequestHeaders.Authorization == null)
@@ -129,16 +168,14 @@ namespace AdminCorridorSystem
 
                                 var token = (JObject)JsonConvert.DeserializeObject(stringResponse);
                                 var tok = token.First.First.Value<string>();
-                                var dTNow = DateTime.Now;
-                                var exp = dTNow + TimeSpan.FromDays(14);
 
                                 HttpContext.Current.Response.Cookies.Set(new HttpCookie("AccessToken")
-                                {
-                                    Expires = exp,
+                                {                     
                                     Value = tok,
                                     HttpOnly = true,
 
                                 });
+                                
 
                                 return stringResponse.ToString();
                             }

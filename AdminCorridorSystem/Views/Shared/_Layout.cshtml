@@ -6,12 +6,17 @@
     @*<title>@ViewBag.Title - My ASP.NET Application</title>*@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
           rel="stylesheet">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
     
     <link href='../lib/fullcalendar.css' rel='stylesheet' />
     <link href='../lib/fullcalendar.print.css' rel='stylesheet' media='print' />
     <script src='../lib/moment.min.js'></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src='../lib/fullcalendar.min.js'></script>
+    <link rel="stylesheet" href="~/Content/Basic.css">
 
     @Styles.Render("~/Content/Site.css")
     @Scripts.Render("~/bundles/modernizr")
@@ -29,7 +34,7 @@
             <li><a href="/Home/Index" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Home"><i class="material-icons">home</i></a></li>
             <li><a href="/Home/Schedule" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Schedule"><i class="small material-icons">schedule</i></a></li>
             <li><a href="/Home/ManageUsers" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Manage users"><i class="small material-icons">group</i></a></li>
-        </ul>
+                    </ul>
 
         <span>@HttpContext.Current.Request.Cookies["AccessToken"].Value</span>
 
@@ -61,5 +66,9 @@
 
     @*@Scripts.Render("~/bundles/jquery")*@
     @RenderSection("scripts", required: false)
+
+
+
+
 </body>
 </html>
